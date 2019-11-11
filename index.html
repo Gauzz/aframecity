@@ -18,25 +18,98 @@
             <a-entity  movement-controls="speed:0.1">
             <a-entity  camera look-controls position="0 0.28 0"></a-entity>
             </a-entity>
-            <a-entity static-body gltf-model="parkinglot/ParkingLot.gltf" position="-1.984 0 0"></a-entity>
+            <a-entity id="parkinglot" static-body gltf-model="parkinglot/ParkingLot.gltf" position="-1.984 0 0"></a-entity>
             <!-- <a-entity static-body gltf-model="rio/model.gltf" position="0.000 5 14.219"></a-entity> -->
-          <a-entity id="street" scale="2.0 2.0 2.0">
+          <a-entity id="street" position="7.115 0 -0.617" rotation="0 90 0">  
+          <a-entity id="buildings1" scale="2.0 2.0 2.0">
             <a-entity static-body scale="0.01 0.01 0.01" gltf-model="skyscraper/Skycraper_173.gltf" position="1.183 0.00 -3.132"></a-entity>
             <a-entity static-body scale="0.01 0.01 0.01" gltf-model="skyscraper/Skycraper_173.gltf" position="3.741 0.00 -3.132"></a-entity>
             <a-entity static-body scale="0.01 0.01 0.01" gltf-model="skyscraper/Skycraper_173.gltf" position="6.299 0.00 -3.132"></a-entity>
             <a-entity static-body scale="0.01 0.01 0.01" gltf-model="skyscraper/Skycraper_173.gltf" position="8.857 0.00 -3.132"></a-entity>
             <a-entity static-body scale="0.01 0.01 0.01" gltf-model="skyscraper/Skycraper_173.gltf" position="11.415 0.00 -3.132"></a-entity>
           </a-entity>
-          <a-entity id="street2" scale="2.0 2.0 2.0" rotation="0 -90 0" position="10.490 0 -2.385">
+        
+          <a-entity static-body="" id="car" gltf-model="car/1377 Car.gltf" scale="0.008 0.008 0.008" position="0.6145 0.02714 -5.13446" rotation="0 90 0"></a-entity>
+          <a-entity id="car2" gltf-model="car2/model.gltf" scale="0.13 0.13 0.13" rotation="0 180 0" position="3.93892 0.2 -5.56472"></a-entity>
+        
+        
+          <a-entity id="buildings2" scale="2.0 2.0 2.0" rotation="0 180.000 0" position="25.768 0 -9.530">
                 <a-entity static-body="" scale="0.01 0.01 0.01" gltf-model="skyscraper/Skycraper_173.gltf" position="1.183 0 -3.132"></a-entity>
                 <a-entity static-body="" scale="0.01 0.01 0.01" gltf-model="skyscraper/Skycraper_173.gltf" position="3.741 0 -3.132"></a-entity>
                 <a-entity static-body="" scale="0.01 0.01 0.01" gltf-model="skyscraper/Skycraper_173.gltf" position="6.299 0 -3.132"></a-entity>
                 <a-entity static-body="" scale="0.01 0.01 0.01" gltf-model="skyscraper/Skycraper_173.gltf" position="8.857 0 -3.132"></a-entity>
                 <a-entity static-body="" scale="0.01 0.01 0.01" gltf-model="skyscraper/Skycraper_173.gltf" position="11.415 0 -3.132"></a-entity>
               </a-entity>
-          <a-entity static-body scale="100 100 100" material="src:#groundimg; repeat:2000 2000; side: double; color: #333333" geometry="primitive: plane" rotation="90 0 0"></a-entity>
-          <a-entity static-body="" id="car" gltf-model="car/1377 Car.gltf" scale="0.008 0.008 0.008" position="0.6145 0.02714 -5.13446" rotation="0 90 0"></a-entity>
-          <a-entity id="car2" gltf-model="car2/model.gltf" scale="0.13 0.13 0.13" rotation="0 180 0" position="3.93892 0.2 -5.56472"></a-entity>
+            </a-entity>   
+
+          <a-entity id="street2" position="4.628 0 8.956" rotation="0 0 0">  
+              <a-entity id="buildings11" scale="2.0 2.0 2.0">
+                <a-entity static-body scale="0.01 0.01 0.01" gltf-model="skyscraper/Skycraper_173.gltf" position="1.183 0.00 -3.132"></a-entity>
+                <a-entity static-body scale="0.01 0.01 0.01" gltf-model="skyscraper/Skycraper_173.gltf" position="3.741 0.00 -3.132"></a-entity>
+                <a-entity static-body scale="0.01 0.01 0.01" gltf-model="skyscraper/Skycraper_173.gltf" position="6.299 0.00 -3.132"></a-entity>
+                <a-entity static-body scale="0.01 0.01 0.01" gltf-model="skyscraper/Skycraper_173.gltf" position="8.857 0.00 -3.132"></a-entity>
+                <a-entity static-body scale="0.01 0.01 0.01" gltf-model="skyscraper/Skycraper_173.gltf" position="11.415 0.00 -3.132"></a-entity>
+              </a-entity>
+            
+              <a-entity static-body="" id="car1" gltf-model="car/1377 Car.gltf" scale="0.008 0.008 0.008" position="0.6145 0.02714 -5.13446" rotation="0 90 0"></a-entity>
+              <a-entity id="car21" gltf-model="car2/model.gltf" scale="0.13 0.13 0.13" rotation="0 180 0" position="3.93892 0.2 -5.56472"></a-entity>
+            
+            
+              <a-entity id="buildings21" scale="2.0 2.0 2.0" rotation="0 180.000 0" position="25.768 0 -9.530">
+                    <a-entity static-body="" scale="0.01 0.01 0.01" gltf-model="skyscraper/Skycraper_173.gltf" position="1.183 0 -3.132"></a-entity>
+                    <a-entity static-body="" scale="0.01 0.01 0.01" gltf-model="skyscraper/Skycraper_173.gltf" position="3.741 0 -3.132"></a-entity>
+                    <a-entity static-body="" scale="0.01 0.01 0.01" gltf-model="skyscraper/Skycraper_173.gltf" position="6.299 0 -3.132"></a-entity>
+                    <a-entity static-body="" scale="0.01 0.01 0.01" gltf-model="skyscraper/Skycraper_173.gltf" position="8.857 0 -3.132"></a-entity>
+                    <a-entity static-body="" scale="0.01 0.01 0.01" gltf-model="skyscraper/Skycraper_173.gltf" position="11.415 0 -3.132"></a-entity>
+                  </a-entity>
+            </a-entity>   
+
+          <a-entity id="street3" position="0 0 -1.479" rotation="0 180 0">  
+                  <a-entity id="buildings12" scale="2.0 2.0 2.0">
+                    <a-entity static-body scale="0.01 0.01 0.01" gltf-model="skyscraper/Skycraper_173.gltf" position="1.183 0.00 -3.132"></a-entity>
+                    <a-entity static-body scale="0.01 0.01 0.01" gltf-model="skyscraper/Skycraper_173.gltf" position="3.741 0.00 -3.132"></a-entity>
+                    <a-entity static-body scale="0.01 0.01 0.01" gltf-model="skyscraper/Skycraper_173.gltf" position="6.299 0.00 -3.132"></a-entity>
+                    <a-entity static-body scale="0.01 0.01 0.01" gltf-model="skyscraper/Skycraper_173.gltf" position="8.857 0.00 -3.132"></a-entity>
+                    <a-entity static-body scale="0.01 0.01 0.01" gltf-model="skyscraper/Skycraper_173.gltf" position="11.415 0.00 -3.132"></a-entity>
+                  </a-entity>
+                
+                  <a-entity static-body="" id="car2" gltf-model="car/1377 Car.gltf" scale="0.008 0.008 0.008" position="0.6145 0.02714 -5.13446" rotation="0 90 0"></a-entity>
+                  <a-entity id="car22" gltf-model="car2/model.gltf" scale="0.13 0.13 0.13" rotation="0 180 0" position="3.93892 0.2 -5.56472"></a-entity>
+                
+                
+                  <a-entity id="buildings22" scale="2.0 2.0 2.0" rotation="0 180.000 0" position="25.768 0 -9.530">
+                        <a-entity static-body="" scale="0.01 0.01 0.01" gltf-model="skyscraper/Skycraper_173.gltf" position="1.183 0 -3.132"></a-entity>
+                        <a-entity static-body="" scale="0.01 0.01 0.01" gltf-model="skyscraper/Skycraper_173.gltf" position="3.741 0 -3.132"></a-entity>
+                        <a-entity static-body="" scale="0.01 0.01 0.01" gltf-model="skyscraper/Skycraper_173.gltf" position="6.299 0 -3.132"></a-entity>
+                        <a-entity static-body="" scale="0.01 0.01 0.01" gltf-model="skyscraper/Skycraper_173.gltf" position="8.857 0 -3.132"></a-entity>
+                        <a-entity static-body="" scale="0.01 0.01 0.01" gltf-model="skyscraper/Skycraper_173.gltf" position="11.415 0 -3.132"></a-entity>
+                      </a-entity>
+            </a-entity>   
+    
+          <a-entity id="street4" position="-2.577 0 6.887" rotation="0 -90 0">  
+                      <a-entity id="buildings13" scale="2.0 2.0 2.0">
+                        <a-entity static-body scale="0.01 0.01 0.01" gltf-model="skyscraper/Skycraper_173.gltf" position="1.183 0.00 -3.132"></a-entity>
+                        <a-entity static-body scale="0.01 0.01 0.01" gltf-model="skyscraper/Skycraper_173.gltf" position="3.741 0.00 -3.132"></a-entity>
+                        <a-entity static-body scale="0.01 0.01 0.01" gltf-model="skyscraper/Skycraper_173.gltf" position="6.299 0.00 -3.132"></a-entity>
+                        <a-entity static-body scale="0.01 0.01 0.01" gltf-model="skyscraper/Skycraper_173.gltf" position="8.857 0.00 -3.132"></a-entity>
+                        <a-entity static-body scale="0.01 0.01 0.01" gltf-model="skyscraper/Skycraper_173.gltf" position="11.415 0.00 -3.132"></a-entity>
+                      </a-entity>
+                    
+                      <a-entity static-body="" id="car3" gltf-model="car/1377 Car.gltf" scale="0.008 0.008 0.008" position="0.6145 0.02714 -5.13446" rotation="0 90 0"></a-entity>
+                      <a-entity id="car23" gltf-model="car2/model.gltf" scale="0.13 0.13 0.13" rotation="0 180 0" position="3.93892 0.2 -5.56472"></a-entity>
+                    
+                    
+                      <a-entity id="buildings23" scale="2.0 2.0 2.0" rotation="0 180.000 0" position="25.768 0 -9.530">
+                            <a-entity static-body="" scale="0.01 0.01 0.01" gltf-model="skyscraper/Skycraper_173.gltf" position="1.183 0 -3.132"></a-entity>
+                            <a-entity static-body="" scale="0.01 0.01 0.01" gltf-model="skyscraper/Skycraper_173.gltf" position="3.741 0 -3.132"></a-entity>
+                            <a-entity static-body="" scale="0.01 0.01 0.01" gltf-model="skyscraper/Skycraper_173.gltf" position="6.299 0 -3.132"></a-entity>
+                            <a-entity static-body="" scale="0.01 0.01 0.01" gltf-model="skyscraper/Skycraper_173.gltf" position="8.857 0 -3.132"></a-entity>
+                            <a-entity static-body="" scale="0.01 0.01 0.01" gltf-model="skyscraper/Skycraper_173.gltf" position="11.415 0 -3.132"></a-entity>
+                          </a-entity>
+            </a-entity>   
+        
+
+          <a-entity id="ground" static-body scale="100 100 100" material="src:#groundimg; repeat:2000 2000; side: double; color: #333333" geometry="primitive: plane" rotation="90 0 0"></a-entity>
           <a-entity id="diningcar" position="-1.952 0 4.381" gltf-model="diningcar/Diner.gltf" scale="0.2 0.2 0.2" rotation="0 90 0"></a-entity>
         </a-scene>
         <script>
