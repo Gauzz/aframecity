@@ -15,6 +15,8 @@
         <a-scene physics="debug: true">
             <a-assets>
                     <img id="groundimg" src="https://aframe.io/sample-assets/assets/images/terrain/grasslight-big.jpg" crossOrigin="true">
+                    <a-asset-item id="colony3obj" src="street/Lowpoly_City_Free_Pack.obj"></a-asset-item>
+                    <a-asset-item id="colony3mtl" src="street/Lowpoly_City_Free_Pack.mtl"></a-asset-item>
             </a-assets>
             <a-entity position="15.581 0 23.008" movement-controls="speed:0.1">
             <a-entity  camera look-controls position="0 0.28 0"></a-entity>
@@ -177,10 +179,10 @@
         </a-entity> -->
           <a-entity id="characters" position="1.73159 -1.172 38.43608" gltf-model="model_gltf_1cy6Vk2uwSU_aBN8vP2lKHR/model.gltf"></a-entity>
          <a-entity id="colony3" position="-9.961 0 -16.131">
-          <a-entity id="stree5" position="22.42722 0.719 36.01072" obj-model="obj: street/Lowpoly_City_Free_Pack.obj; mtl: street/Lowpoly_City_Free_Pack.mtl" scale="0.005 0.005 0.005"></a-entity>
-          <a-entity id="stree5-2" position="33.05948 0.719 36.01072" obj-model="obj: street/Lowpoly_City_Free_Pack.obj; mtl: street/Lowpoly_City_Free_Pack.mtl" scale="0.005 0.005 0.005"></a-entity>
-          <a-entity id="stree5-4" position="33.35084 0.719 25.10419" obj-model="obj: street/Lowpoly_City_Free_Pack.obj; mtl: street/Lowpoly_City_Free_Pack.mtl" scale="0.005 0.005 0.005"></a-entity>
-          <a-entity id="stree5-3" position="22.42722 0.719 25.89345" obj-model="obj: street/Lowpoly_City_Free_Pack.obj; mtl: street/Lowpoly_City_Free_Pack.mtl" scale="0.005 0.005 0.005"></a-entity>
+          <a-entity id="stree5" position="22.42722 0.719 36.01072" obj-model="obj:#colony3obj; mtl: #colony3mtl" scale="0.005 0.005 0.005"></a-entity>
+          <a-entity id="stree5-2" position="33.05948 0.719 36.01072" obj-model="obj: #colony3obj; mtl: #colony3mtl" scale="0.005 0.005 0.005"></a-entity>
+          <a-entity id="stree5-4" position="33.35084 0.719 25.10419" obj-model="obj: #colony3obj; mtl: #colony3mtl" scale="0.005 0.005 0.005"></a-entity>
+          <a-entity id="stree5-3" position="22.42722 0.719 25.89345" obj-model="obj: #colony3obj; mtl: #colony3mtl" scale="0.005 0.005 0.005"></a-entity>
          </a-entity>
           <!-- <a-entity id="carsandbuses" position="26.736 0.000 9.337" obj-model="mtl: cars and buses/Low_Poly_City_Cars.mtl; obj: cars and buses/Low_Poly_City_Cars.obj" scale="0.004 0.004 0.004"></a-entity> -->
           <a-entity id="hospital" position="34.72733 0.448 9.337" gltf-model="hospital/CUPIC_HOSPITAL.gltf" scale="0.004 0.004 0.004"></a-entity>
