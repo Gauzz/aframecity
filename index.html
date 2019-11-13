@@ -201,9 +201,33 @@
           <a-entity id="persongirl1" gltf-model="person/girl1/google poly.gltf" scale="0.4 0.4 0.4" position="2.536 -0.04056 0"></a-entity>
           <a-entity id="persongirl2" gltf-model="person/girl2/google poly.gltf" scale="0.4 0.4 0.4" position="2.029 -0.051 0"></a-entity>
           <a-entity gltf-model="person/model/model.gltf" scale="0.32 0.32 0.32" id="person farmer" position="0 0.636 5.92344"></a-entity>
-        </a-scene>
+          <a-entity geometry="primitive: circle" scale="0.1 0.1 0.1" id="trafficlight" position="-3.66013 2.57078 4.642" material="color: #ff8080"></a-entity>   </a-scene>
         <script>
-          
+          // red : #ff8080;
+          // green : #80ff80;
+          // yellow : #ffff80;
+
+          var i=0;
+
+          setInterval(function(){
+             i++; auto(); }, 10000);
+
+         
+
+          function auto(){
+            if(i%3 == 0){
+             var light= document.querySelector("#trafficlight");
+             light.setAttribute("material",'color', '#ff8080');
+            }
+            if(i%3 == 1){
+             var light= document.querySelector("#trafficlight");
+             light.setAttribute("material",'color', '#ffff80');
+            }
+            if(i%3 == 2){
+             var light= document.querySelector("#trafficlight");
+             light.setAttribute("material",'color', '#80ff80');
+            }
+          }  
         </script>        
 </body>
 </html>
