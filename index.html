@@ -15,15 +15,14 @@
         <a-scene physics="debug: true">
             <a-assets>
                     <img id="groundimg" src="https://aframe.io/sample-assets/assets/images/terrain/grasslight-big.jpg" crossOrigin="true">
-                    <a-asset-item id="colony3obj" src="street/Lowpoly_City_Free_Pack.obj"></a-asset-item>
+                    <a-asset-item id="colony3obj" src="street2/model.obj"></a-asset-item>
                     <a-asset-item id="colony3mtl" src="street/Lowpoly_City_Free_Pack.mtl"></a-asset-item>
             </a-assets>
-            <a-entity position="15.581 0 23.008" movement-controls="speed:0.1">
-            <a-entity  camera look-controls position="0 0.28 0"></a-entity>
+            <a-entity position="0 0 0" movement-controls="speed:0.1">
+            <a-entity  camera look-controls position="0 0.690 0"></a-entity>
             </a-entity>
-            <a-entity id="parkinglot" static-body="" gltf-model="parkinglot/ParkingLot.gltf" position="12.54615 0 35.24236"></a-entity>
-            <!-- <a-entity static-body gltf-model="rio/model.gltf" position="0.000 5 14.219"></a-entity> -->
-          <a-entity id="street" position="7.115 0 -0.617" rotation="0 90 0">  
+            <a-entity id="parkinglot" static-body="" gltf-model="parkinglot/ParkingLot.gltf" position="12.54615 0 -30.922" scale="5 5 5"></a-entity>   <!-- <a-entity static-body gltf-model="rio/model.gltf" position="0.000 5 14.219"></a-entity> -->
+          <!-- <a-entity id="street" position="7.115 0 -0.617" rotation="0 90 0">  
           <a-entity id="buildings1" scale="2.0 2.0 2.0">
             <a-entity static-body scale="0.01 0.01 0.01" gltf-model="skyscraper/Skycraper_173.gltf" position="1.183 0.00 -3.132"></a-entity>
             <a-entity static-body scale="0.01 0.01 0.01" gltf-model="skyscraper/Skycraper_173.gltf" position="3.741 0.00 -3.132"></a-entity>
@@ -109,16 +108,16 @@
                             <a-entity static-body="" scale="0.01 0.01 0.01" gltf-model="skyscraper/Skycraper_173.gltf" position="8.857 0 -3.132"></a-entity>
                             <a-entity static-body="" scale="0.01 0.01 0.01" gltf-model="skyscraper/Skycraper_173.gltf" position="11.415 0 -3.132"></a-entity>
                           </a-entity>
-            </a-entity>   
-        
+            </a-entity>    -->
+            
 
           <a-entity id="ground" static-body scale="100 100 100" material="src:#groundimg; repeat:2000 2000; side: double; color: #333333" geometry="primitive: plane" rotation="90 0 0"></a-entity>
       
-          <a-entity id="diningcar" position="8.35841 0 36.25325" gltf-model="diningcar/Diner.gltf" scale="0.2 0.2 0.2" rotation="0 90 0"></a-entity>
+          <!-- <a-entity id="diningcar" position="8.35841 0 36.25325" gltf-model="diningcar/Diner.gltf" scale="0.2 0.2 0.2" rotation="0 90 0"></a-entity> -->
       
 
 
-          <a-entity id="colony1">
+          <!-- <a-entity id="colony1">
           <a-entity id="street11" position="-8.820 3.141 -12.610" scale="1.60 1.60 1.60" gltf-model="archive (2)/model.gltf"></a-entity>
           <a-entity id="street12" position="-8.820 3.141 -23.682" scale="1.60 1.60 1.60" gltf-model="archive (2)/model.gltf"></a-entity>
           <a-entity id="street13" position="-23.682 3.141 -12.564" scale="1.60 1.60 1.60" gltf-model="archive (2)/model.gltf"></a-entity>
@@ -135,9 +134,9 @@
               <a-entity id="street12" position="-8.820 3.141 -23.682" scale="1.60 1.60 1.60" gltf-model="archive (2)/model.gltf"></a-entity>
               <a-entity id="street13" position="-23.682 3.141 -12.564" scale="1.60 1.60 1.60" gltf-model="archive (2)/model.gltf"></a-entity>
               <a-entity id="street14" position="-23.682 3.141 -23.682" scale="1.60 1.60 1.60" gltf-model="archive (2)/model.gltf"></a-entity>
-              </a-entity>
+              </a-entity> -->
 
-          <a-entity id="gallery" position="-17.259 -5.036 37.630" gltf-model="archive (3)/model.gltf" scale="5 5 5" ></a-entity>
+          <!-- <a-entity id="gallery" position="-17.259 -5.036 37.630" gltf-model="archive (3)/model.gltf" scale="5 5 5" ></a-entity> -->
 
           <!-- <a-entity id="colony21">
 
@@ -177,27 +176,31 @@
           </a-entity>
           
         </a-entity> -->
-          <a-entity id="characters" position="1.73159 -1.172 38.43608" gltf-model="model_gltf_1cy6Vk2uwSU_aBN8vP2lKHR/model.gltf"></a-entity>
-         <a-entity id="colony3" position="-9.961 0 -16.131">
-          <a-entity id="stree5" position="22.42722 0.719 36.01072" obj-model="obj:#colony3obj; mtl: #colony3mtl" scale="0.005 0.005 0.005"></a-entity>
-          <a-entity id="stree5-2" position="33.05948 0.719 36.01072" obj-model="obj: #colony3obj; mtl: #colony3mtl" scale="0.005 0.005 0.005"></a-entity>
-          <a-entity id="stree5-4" position="33.35084 0.719 25.10419" obj-model="obj: #colony3obj; mtl: #colony3mtl" scale="0.005 0.005 0.005"></a-entity>
-          <a-entity id="stree5-3" position="22.42722 0.719 25.211" obj-model="obj: #colony3obj; mtl: #colony3mtl" scale="0.005 0.005 0.005"></a-entity>
+          <!-- <a-entity id="characters" position="1.73159 -1.172 38.43608" gltf-model="model_gltf_1cy6Vk2uwSU_aBN8vP2lKHR/model.gltf"></a-entity> -->
+         <a-entity id="colony3" position="0 0 0">
+          <a-entity id="stree5" position="-10.141 2.469 35.361" obj-model="obj:#colony3obj; mtl: #colony3mtl" scale="1 1 1" ></a-entity>
+          <a-entity id="stree5-2" position="33.436 2.469 35.275" obj-model="obj: #colony3obj; mtl: #colony3mtl" ></a-entity>
+          <a-entity id="stree5-4" position="33.351 2.469 -8.302" obj-model="obj: #colony3obj; mtl: #colony3mtl" ></a-entity>
+          <a-entity id="stree5-3" position="-10.248 2.469 -8.160" obj-model="obj: #colony3obj; mtl: #colony3mtl" ></a-entity>
          </a-entity>
           <!-- <a-entity id="carsandbuses" position="26.736 0.000 9.337" obj-model="mtl: cars and buses/Low_Poly_City_Cars.mtl; obj: cars and buses/Low_Poly_City_Cars.obj" scale="0.004 0.004 0.004"></a-entity> -->
           <a-entity id="hospital" position="34.72733 0.448 9.337" gltf-model="hospital/CUPIC_HOSPITAL.gltf" scale="0.004 0.004 0.004"></a-entity>
           
-          <a-entity id="HOUSE1" position="-2.42986 0.018 38.11234" gltf-model="house1/CUPIC_CHALET.gltf" scale="0.004 0.004 0.004"></a-entity>
+          <!-- <a-entity id="HOUSE1" position="-2.42986 0.018 38.11234" gltf-model="house1/CUPIC_CHALET.gltf" scale="0.004 0.004 0.004"></a-entity> -->
           
-          <a-entity id="HOUSE2" position="1.43759 0.02619 35.95197" gltf-model="house2/HouseWithDriveway.gltf" scale="0.08 0.08 0.08"></a-entity>
+          <!-- <a-entity id="HOUSE2" position="1.43759 0.02619 35.95197" gltf-model="house2/HouseWithDriveway.gltf" scale="0.08 0.08 0.08"></a-entity> -->
 
           <!-- <a-entity id="HOUSE2" position="35.35548 0.02619 11.11795" gltf-model="house2/HouseWithDriveway.gltf" scale="0.08 0.08 0.08"></a-entity> -->
-          <a-entity id="housefence" position="37.45 0 11.205" gltf-model="housefence/PicketFence.gltf" scale="0.04 0.04 0.04"></a-entity>
+          <!-- <a-entity id="housefence" position="37.45 0 11.205" gltf-model="housefence/PicketFence.gltf" scale="0.04 0.04 0.04"></a-entity> -->
                     
-          <a-entity id="bank" position="42.889 -0.298 16.96" gltf-model="bank/Bank_1245.gltf" scale="0.04 0.04 0.04"></a-entity>
-
-          <a-entity id="ambulance" position="36.08032 -0.04154 19.03937" gltf-model="ambulance/Ambulance_01(1).gltf" scale="0.004 0.004 0.004" rotation="-90 0 0"></a-entity>
-       
+          <a-entity id="bank" position="42.889 -0.298 -24.043" gltf-model="bank/Bank_1245.gltf" scale="0.04 0.04 0.04"></a-entity>  <a-entity id="ambulance" position="36.08032 -0.04154 20.319" gltf-model="ambulance/Ambulance_01(1).gltf" scale="0.004 0.004 0.004" rotation="-90 0 0"></a-entity> 
+          <a-entity id="personlady" gltf-model="person/archive (2)/person three.gltf" scale="0.2 0.2 0.2" position="-6.68 0.79474 4.80982"></a-entity>
+          <a-entity id="personcapboy" gltf-model="person/archive_(2)/PERSON 1 dec 10-1.gltf" scale="0.2 0.2 0.2" position="-3.891 0.82521 10.11955"></a-entity>
+          <a-entity id="persondoctor" gltf-model="person/archive_(3)/Doctor_01.gltf" scale="0.05 0.05 0.05" rotation="0 90 0" position="-6.11687 0.19107 1.198"></a-entity>
+          <a-entity id="personteacher" position="2.04299 0.10387 0" gltf-model="person/archive (3)/Teacher_01.gltf" scale="0.05 0.05 0.05"></a-entity>
+          <a-entity id="persongirl1" gltf-model="person/girl1/google poly.gltf" scale="0.4 0.4 0.4" position="2.536 -0.04056 0"></a-entity>
+          <a-entity id="persongirl2" gltf-model="person/girl2/google poly.gltf" scale="0.4 0.4 0.4" position="2.029 -0.051 0"></a-entity>
+          <a-entity gltf-model="person/model/model.gltf" scale="0.32 0.32 0.32" id="person farmer" position="0 0.636 5.92344"></a-entity>
         </a-scene>
         <script>
           
