@@ -20,8 +20,8 @@
             <a-asset-item id="colony3obj" src="street2/model.obj"></a-asset-item>
             <a-asset-item id="colony3mtl" src="street/Lowpoly_City_Free_Pack.mtl"></a-asset-item>
         </a-assets>
-        <a-entity position="0 0 0" movement-controls="speed:0.1">
-            <a-entity camera look-controls position="0 0.690 0"></a-entity>
+        <a-entity position="0 0 0" look-controls movement-controls="speed:0.1">
+            <a-entity camera position="0 0.690 0"></a-entity>
         </a-entity>
         <a-entity id="parkinglot" static-body="" gltf-model="parkinglot/ParkingLot.gltf" position="12.54615 0 -30.922" scale="5 5 5"></a-entity>
         <!-- <a-entity static-body gltf-model="rio/model.gltf" position="0.000 5 14.219"></a-entity> -->
@@ -502,6 +502,8 @@
                 <a-entity geometry="primitive: circle" scale="0.1 0.1 0.1" class="trafficlight2" position="-3.66013 2.571 4.268" material="color: #ff8080; side: double"></a-entity>
             </a-entity>
         </a-entity>
+        <a-entity id="car1" scale="0.1 0.1 0.1" obj-model="mtl: street/Lowpoly_City_Free_Pack.mtl; obj: street/car1.obj" position="-24 2.469 19" rotation="0 45 0" animation__move="dir: forward; dur: 5000; from: 18.657 2.470 18.720; loop: 1000; property: position; to: -45.657 2.470 18.720"
+            p="17.616644031392823 " po="17.268200903949836 " pos="17.07817887806808 " posi="16.173526986387614 " posit="15.595901538363604 " positi="17.66601787101038 " positio="16.813694795063967 "></a-entity>
     </a-scene>
 
     <script>
