@@ -502,8 +502,8 @@
                 <a-entity geometry="primitive: circle" scale="0.1 0.1 0.1" class="trafficlight2" position="-3.66013 2.571 4.268" material="color: #ff8080; side: double"></a-entity>
             </a-entity>
         </a-entity>
-        <a-entity id="car1" scale="0.1 0.1 0.1" obj-model="mtl: street/Lowpoly_City_Free_Pack.mtl; obj: street/car1.obj" position="-24 2.469 19" rotation="0 45 0" animation__move="dir: forward; dur: 5000; from: 18.657 2.470 18.720; loop: 1000; property: position; to: -45.657 2.470 18.720"
-            p="17.616644031392823 " po="17.268200903949836 " pos="17.07817887806808 " posi="16.173526986387614 " posit="15.595901538363604 " positi="17.66601787101038 " positio="16.813694795063967 "></a-entity>
+        <a-entity id="car1" scale="0.1 0.1 0.1" obj-model="mtl: street/Lowpoly_City_Free_Pack.mtl; obj: street/car1.obj" position="21.645 2.469 19" rotation="0 45 0"></a-entity>
+
     </a-scene>
 
     <script>
@@ -514,6 +514,7 @@
         var i = 0;
         var light1 = document.querySelectorAll(".trafficlight1");
         var light2 = document.querySelectorAll(".trafficlight2");
+        var car1 = document.querySelector("#car1");
 
         setInterval(function() {
             i++;
@@ -523,25 +524,79 @@
 
 
         function auto() {
-
-            if (i % 3 == 0) {
+            if (i % 3 == 1) {
                 for (x = 0; x < light1.length; x++) {
                     light1[x].setAttribute("material", 'color', '#ff8080');
                     light2[x].setAttribute("material", 'color', '#80ff80');
                 }
+                if (i % 2 == 0) {
+                    //-47.589 2.469 19.000
+                    anim1 = 'animation__a4' + i;
+                    anim2 = 'animation__a1' + i;
+                    car1.setAttribute(anim1, {
+                        property: "rotation",
+                        dir: "forward",
+                        from: "0 -45 0",
+                        property: "rotation",
+                        to: "0 45 0",
+                        autoplay: "true",
+                        dur: "0"
+                    });
+                    car1.setAttribute(anim2, {
+                        property: "position",
+                        dir: "forward",
+                        from: "21.645 2.469 19",
+                        property: "position",
+                        to: "-47.589 2.469 19.000",
+                        autoplay: "true",
+                        dur: "9000"
+                    });
+                    console.log("its here");
+                }
             }
-            if (i % 3 == 1) {
+            if (i % 3 == 0) {
                 for (x = 0; x < light1.length; x++) {
                     light1[x].setAttribute("material", 'color', '#ffff80');
                     light2[x].setAttribute("material", 'color', '#ffff80');
                 }
             }
+
             if (i % 3 == 2) {
                 for (x = 0; x < light1.length; x++) {
                     light1[x].setAttribute("material", 'color', '#80ff80');
                     light2[x].setAttribute("material", 'color', '#ff8080');
                 }
+
+
+
+                if (i % 2 == 1) {
+                    //rot :0 -45 0
+                    //pos1 :-12.301 2.469 27.425
+                    //pos2 :-12.301 2.469 -27.778
+                    anim1 = 'animation__a2' + i;
+                    anim2 = 'animation__a3' + i;
+                    car1.setAttribute(anim1, {
+                        property: "rotation",
+                        dir: "forward",
+                        from: "0 45 0",
+                        property: "rotation",
+                        to: "0 -45 0",
+                        autoplay: "true",
+                        dur: "2"
+                    });
+                    car1.setAttribute(anim2, {
+                        property: "position",
+                        dir: "forward",
+                        from: "-12.301 2.469 27.425",
+                        property: "position",
+                        to: "-12.301 2.469 -27.778",
+                        autoplay: "true",
+                        dur: "9000"
+                    });
+                }
+
             }
+
         }
     </script>
 </body>
