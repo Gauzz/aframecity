@@ -20,6 +20,7 @@
             <a-asset-item id="colony3obj" src="street2/model.obj"></a-asset-item>
             <a-asset-item id="colony3mtl" src="street/Lowpoly_City_Free_Pack.mtl"></a-asset-item>
         </a-assets>
+        <a-sound src="src: url(cityambiance.mp3)" volume="0.1" loop="true" autoplay="true" position="0 0.311 5"></a-sound>
         <a-entity position="0 0 0" look-controls movement-controls="speed:0.1">
             <a-entity camera position="0 0.690 0"></a-entity>
         </a-entity>
@@ -586,7 +587,7 @@
                         property: "rotation",
                         to: "0 -169 0",
                         autoplay: "true",
-                        dur: "2"
+                        dur: "0"
                     });
                     car3.setAttribute(anim2, {
                         property: "position",
@@ -604,7 +605,7 @@
                         property: "rotation",
                         to: "0 180 0",
                         autoplay: "true",
-                        dur: "2"
+                        dur: "0"
                     });
                     truck1.setAttribute(anim2, {
                         property: "position",
@@ -619,6 +620,7 @@
                 if (i % 2 == 1) {
                     anim1 = 'animation__a6' + i;
                     anim2 = 'animation__a5' + i;
+                    anim3 = 'animation__a9' + i;
                     car1.setAttribute(anim1, {
                         property: "rotation",
                         dir: "forward",
@@ -692,7 +694,7 @@
                         property: "rotation",
                         to: "0 0 0",
                         autoplay: "true",
-                        dur: "2"
+                        dur: "0"
                     });
                     truck1.setAttribute(anim3, {
                         property: "position",
@@ -728,7 +730,7 @@
                         property: "rotation",
                         to: "0 135 0",
                         autoplay: "true",
-                        dur: "2"
+                        dur: "0"
                     });
                     car1.setAttribute(anim2, {
                         property: "position",
@@ -746,7 +748,7 @@
                         property: "rotation",
                         to: "0 -79 0",
                         autoplay: "true",
-                        dur: "2"
+                        dur: "0"
                     });
                     car3.setAttribute(anim2, {
                         property: "position",
@@ -764,7 +766,7 @@
                         property: "rotation",
                         to: "0 90 0",
                         autoplay: "true",
-                        dur: "2"
+                        dur: "0"
                     });
                     truck1.setAttribute(anim2, {
                         property: "position",
@@ -790,7 +792,7 @@
                         property: "rotation",
                         to: "0 -45 0",
                         autoplay: "true",
-                        dur: "2"
+                        dur: "0"
                     });
                     car1.setAttribute(anim2, {
                         property: "position",
@@ -808,7 +810,7 @@
                         property: "rotation",
                         to: "0 101 0",
                         autoplay: "true",
-                        dur: "2"
+                        dur: "0"
                     });
                     car3.setAttribute(anim2, {
                         property: "position",
@@ -826,7 +828,7 @@
                         property: "rotation",
                         to: "0 -90 0",
                         autoplay: "true",
-                        dur: "2"
+                        dur: "0"
                     });
                     truck1.setAttribute(anim2, {
                         property: "position",
