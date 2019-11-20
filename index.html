@@ -26,7 +26,7 @@
         </a-entity>
         <a-entity id="ground" static-body scale="100 100 100" material="src:#groundimg; repeat:2000 2000; side: double; color: #333333" geometry="primitive: plane" rotation="90 0 0"></a-entity>
         <a-entity id="citybase1" position="-3.219 0 -22.440" sound="src: url(cityambiance.mp3); loop:true; autoplay:true;">
-            <a-entity id="parkinglot" static-body="" gltf-model="parkinglot/ParkingLot.gltf" position="12.54615 0 -30.922" scale="5 5 5"></a-entity>
+            <!-- <a-entity id="parkinglot" static-body="" gltf-model="parkinglot/ParkingLot.gltf" position="12.54615 0 -30.922" scale="5 5 5"></a-entity> -->
             <!-- <a-entity static-body gltf-model="rio/model.gltf" position="0.000 5 14.219"></a-entity> -->
             <!-- <a-entity id="street" position="7.115 0 -0.617" rotation="0 90 0">  
           <a-entity id="buildings1" scale="2.0 2.0 2.0">
@@ -202,15 +202,15 @@
             <a-entity id="parkedcars2" scale="0.1 0.1 0.1" position="-10.62146 2.49437 -8.31992" rotation="" obj-model="mtl: street/Lowpoly_City_Free_Pack.mtl; obj: street/car2.obj"></a-entity>
             <a-entity position="-38.163 2.481 94.775" obj-model="mtl: street/Lowpoly_City_Free_Pack.mtl; obj: street/truck1.obj" id="truck1" scale="0.1 0.1 0.1" rotation="0 180 0"></a-entity>
             <a-entity obj-model="mtl: street/Lowpoly_City_Free_Pack.mtl; obj: street/car3.obj" scale="0.1 0.1 0.1" id="car3" position="1.432 2.474 13.299" rotation="0 101 0"></a-entity>
-            <a-entity id="bank" position="42.889 -0.298 -24.043" gltf-model="bank/Bank_1245.gltf" scale="0.04 0.04 0.04"></a-entity>
+            <!-- <a-entity id="bank" position="42.889 -0.298 -24.043" gltf-model="bank/Bank_1245.gltf" scale="0.04 0.04 0.04"></a-entity> -->
             <a-entity id="ambulance" position="36.08032 0.119 20.319" gltf-model="ambulance/Ambulance_01(1).gltf" scale="0.004 0.004 0.004" rotation="-90 0 0"></a-entity>
             <a-entity id="personlady" gltf-model="person/archive (2)/person three.gltf" scale="0.2 0.2 0.2" position="-6.68 0.826 5.157"></a-entity>
-            <a-entity id="personcapboy" rotation="0 0 10.67" gltf-model="person/archive_(2)/PERSON 1 dec 10-1.gltf" scale="0.2 0.2 0.2" position="-3.891 0.82521 10.11955"></a-entity>
+            <a-entity id="personcapboy" rotation="0 0 10.67" gltf-model="person/archive_(2)/PERSON 1 dec 10-1.gltf" scale="0.18 0.18 0.18" position="7.93562 0.62291 14.77371"></a-entity>
             <!-- <a-entity id="persondoctor" gltf-model="person/archive_(3)/Doctor_01.gltf" scale="0.05 0.05 0.05" rotation="0 90 0" position="-6.11687 0.19107 1.198"></a-entity> -->
             <a-entity id="persondoctor1" gltf-model="person/archive_(3)/Doctor_01.gltf" scale="0.05 0.05 0.05" rotation="" position="-15.8175 0.19107 38.6536"></a-entity>
             <a-entity id="pair">
                 <a-entity id="persondoctor2" gltf-model="person/archive_(3)/Doctor_01.gltf" scale="0.05 0.05 0.05" rotation="0 180 0" position="-9.003 0.19107 14.477"></a-entity>
-                <a-entity id="personteacher1" position="-8.972 0.194 14.148" gltf-model="person/archive (3)/Teacher_01.gltf" scale="0.05 0.05 0.05"></a-entity>
+                <a-entity id="personteacher1" position="-8.972 0.194 14.148" gltf-model="person/cowboy/scene.gltf" scale="0.15 0.15 0.15"></a-entity>
             </a-entity>
             <a-entity id="pair2" position="5.252 0 23.22297">
                 <a-entity id="persondoctor2" gltf-model="person/archive_(3)/Doctor_01.gltf" scale="0.05 0.05 0.05" rotation="0 180 0" position="-9.003 0.19107 14.477"></a-entity>
@@ -221,52 +221,52 @@
                 <a-entity id="personteacher1" position="-8.972 0.194 14.148" gltf-model="person/archive (3)/Teacher_01.gltf" scale="0.05 0.05 0.05"></a-entity>
             </a-entity>
             <a-entity id="pair4" position="-6.96151 0 44.56955">
-                <a-entity id="persondoctor2" gltf-model="person/archive_(3)/Doctor_01.gltf" scale="0.05 0.05 0.05" rotation="0 180 0" position="-9.003 0.19107 14.477"></a-entity>
+                <a-entity id="persondoctor2" gltf-model="person/cowboy/scene.gltf" scale="0.15 0.15 0.15" rotation="0 180 0" position="-9.003 0.19107 14.477"></a-entity>
                 <a-entity id="personteacher1" position="-8.972 0.194 14.148" gltf-model="person/archive (3)/Teacher_01.gltf" scale="0.05 0.05 0.05"></a-entity>
             </a-entity>
-            <a-entity id="pair5" position="-25.91435 0 23.22297">
+            <a-entity id="pair5" position="-25.91435 0.075 23.22297">
                 <a-entity id="persondoctor2" gltf-model="person/archive_(3)/Doctor_01.gltf" scale="0.05 0.05 0.05" rotation="0 180 0" position="-9.003 0.19107 14.477"></a-entity>
-                <a-entity id="personteacher1" position="-8.972 0.194 14.148" gltf-model="person/archive (3)/Teacher_01.gltf" scale="0.05 0.05 0.05"></a-entity>
+                <a-entity id="personteacher1" position="-8.972 0.194 14.148" gltf-model="person/cowboy/scene.gltf" scale="0.15 0.15 0.15"></a-entity>
             </a-entity>
             <a-entity id="pair6" position="-26.11326 0 -1.35915">
                 <a-entity id="persondoctor2" gltf-model="person/archive_(3)/Doctor_01.gltf" scale="0.05 0.05 0.05" rotation="0 180 0" position="-9.003 0.19107 14.477"></a-entity>
                 <a-entity id="personteacher1" position="-8.972 0.194 14.148" gltf-model="person/archive (3)/Teacher_01.gltf" scale="0.05 0.05 0.05"></a-entity>
             </a-entity>
             <a-entity id="pair7" position="-13.88124 0.096 -28.77385">
-                <a-entity id="persondoctor2" gltf-model="person/archive_(3)/Doctor_01.gltf" scale="0.05 0.05 0.05" rotation="0 180 0" position="-9.003 0.19107 14.477"></a-entity>
+                <a-entity id="persondoctor2" gltf-model="person/cowboy/scene.gltf" scale="0.15 0.15 0.15" rotation="0 180 0" position="-9.003 0.19107 14.477"></a-entity>
                 <a-entity id="personteacher1" position="-8.972 0.194 14.148" gltf-model="person/archive (3)/Teacher_01.gltf" scale="0.05 0.05 0.05"></a-entity>
             </a-entity>
             <a-entity id="pair8" position="5.49193 0 -28.77385">
                 <a-entity id="persondoctor2" gltf-model="person/archive_(3)/Doctor_01.gltf" scale="0.05 0.05 0.05" rotation="0 180 0" position="-9.003 0.19107 14.477"></a-entity>
-                <a-entity id="personteacher1" position="-8.972 0.194 14.148" gltf-model="person/archive (3)/Teacher_01.gltf" scale="0.05 0.05 0.05"></a-entity>
+                <a-entity id="personteacher1" position="-8.972 0.194 14.148" gltf-model="person/cowboy/scene.gltf" scale="0.15 0.15 0.15"></a-entity>
             </a-entity>
             <a-entity id="pair9" position="29.48814 0.096 -21.61302">
                 <a-entity id="persondoctor2" gltf-model="person/archive_(3)/Doctor_01.gltf" scale="0.05 0.05 0.05" rotation="0 180 0" position="-9.003 0.19107 14.477"></a-entity>
                 <a-entity id="personteacher1" position="-8.972 0.194 14.148" gltf-model="person/archive (3)/Teacher_01.gltf" scale="0.05 0.05 0.05"></a-entity>
             </a-entity>
             <a-entity id="pair10" position="17.7202 0.096 -17.24412">
-                <a-entity id="persondoctor2" gltf-model="person/archive_(3)/Doctor_01.gltf" scale="0.05 0.05 0.05" rotation="0 180 0" position="-9.003 0.19107 14.477"></a-entity>
+                <a-entity id="persondoctor2" gltf-model="person/cowboy/scene.gltf" scale="0.15 0.15 0.15" rotation="0 180 0" position="-9.003 0.19107 14.477"></a-entity>
                 <a-entity id="personteacher1" position="-8.972 0.194 14.148" gltf-model="person/archive (3)/Teacher_01.gltf" scale="0.05 0.05 0.05"></a-entity>
             </a-entity>
             <a-entity id="pair12" position="17.90409 0.072 19.48305">
                 <a-entity id="persondoctor2" gltf-model="person/archive_(3)/Doctor_01.gltf" scale="0.05 0.05 0.05" rotation="0 180 0" position="-9.003 0.19107 14.477"></a-entity>
                 <a-entity id="personteacher1" position="-8.972 0.194 14.148" gltf-model="person/archive (3)/Teacher_01.gltf" scale="0.05 0.05 0.05"></a-entity>
             </a-entity>
-            <a-entity id="pair13" position="29.84987 0.219 23.23323">
+            <a-entity id="pair13" position="29.84987 0.072 23.23323">
                 <a-entity id="persondoctor2" gltf-model="person/archive_(3)/Doctor_01.gltf" scale="0.05 0.05 0.05" rotation="0 180 0" position="-9.003 0.19107 14.477"></a-entity>
                 <a-entity id="personteacher1" position="-8.972 0.194 14.148" gltf-model="person/archive (3)/Teacher_01.gltf" scale="0.05 0.05 0.05"></a-entity>
             </a-entity>
             <a-entity id="pair14" position="48.48501 0 -0.20765">
-                <a-entity id="persondoctor2" gltf-model="person/archive_(3)/Doctor_01.gltf" scale="0.05 0.05 0.05" rotation="0 180 0" position="-9.003 0.19107 14.477"></a-entity>
+                <a-entity id="persondoctor2" gltf-model="person/cowboy/scene.gltf" scale="0.15 0.15 0.15" rotation="0 180 0" position="-9.003 0.19107 14.477"></a-entity>
                 <a-entity id="personteacher1" position="-8.972 0.194 14.148" gltf-model="person/archive (3)/Teacher_01.gltf" scale="0.05 0.05 0.05"></a-entity>
             </a-entity>
             <a-entity id="pair15" position="24.92548 0 43.86317">
                 <a-entity id="persondoctor2" gltf-model="person/archive_(3)/Doctor_01.gltf" scale="0.05 0.05 0.05" rotation="0 180 0" position="-9.003 0.19107 14.477"></a-entity>
                 <a-entity id="personteacher1" position="-8.972 0.194 14.148" gltf-model="person/archive (3)/Teacher_01.gltf" scale="0.05 0.05 0.05"></a-entity>
             </a-entity>
-            <a-entity id="pair16" position="17.55453 0 -0.1636">
+            <a-entity id="pair16" position="17.55453 -0.072 -0.1636">
                 <a-entity id="persondoctor2" gltf-model="person/archive_(3)/Doctor_01.gltf" scale="0.05 0.05 0.05" rotation="0 180 0" position="-9.003 0.19107 14.477"></a-entity>
-                <a-entity id="personteacher1" position="-8.972 0.194 14.148" gltf-model="person/archive (3)/Teacher_01.gltf" scale="0.05 0.05 0.05"></a-entity>
+                <a-entity id="personteacher1" position="-8.972 0.194 14.148" gltf-model="person/cowboy/scene.gltf" scale="0.15 0.15 0.15"></a-entity>
             </a-entity>
             <a-entity id="personlady-2" gltf-model="person/archive (2)/person three.gltf" scale="0.2 0.2 0.2" position="-16.17905 0.826 39.379" rotation="0 90 0"></a-entity>
             <!-- <a-entity id="persongirl1" gltf-model="person/girl1/google poly.gltf" scale="0.4 0.4 0.4" position="2.536 -0.04056 0"></a-entity>
