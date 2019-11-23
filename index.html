@@ -18,19 +18,24 @@
 
     <a-scene physics="debug: true">
         <a-assets>
-            <img id="groundimg" src="https://aframe.io/sample-assets/assets/images/terrain/grasslight-big.jpg" crossOrigin="true">
             <a-asset-item id="colony3obj" src="street2/model.obj"></a-asset-item>
             <a-asset-item id="colony3mtl" src="street/Lowpoly_City_Free_Pack.mtl"></a-asset-item>
             <audio id="aud">
                     <source src="cityambiance.mp3" type="audio/mpeg">
                   Your browser does not support the audio element.
                   </audio>
+            <img id="testTex" src="test.png">
+            <a-mixin id="floorMat" material="color:#BBB"></a-mixin><img id="groundTexture" src="https://cdn.aframe.io/a-painter/images/floor.jpg" crossorigin="anonymous"><img id="skyTexture" src="https://cdn.aframe.io/a-painter/images/sky.jpg" crossorigin="anonymous">
         </a-assets>
         <a-sound src="src:#aud" loop="true" autoplay="true" position="0 0.311 5"></a-sound>
         <a-entity position="0 0 0" look-controls movement-controls="speed:0.1">
             <a-entity camera position="0 0.690 0"></a-entity>
         </a-entity>
-        <a-entity id="ground" static-body scale="100 100 100" material="src:#groundimg; repeat:2000 2000; side: double; color: #333333" geometry="primitive: plane" rotation="90 0 0"></a-entity>
+        <a-sky height="2048" radius="300" src="#skyTexture" theta-length="90" width="2048" segments-height="5" segments-width="8" material="" geometry=""></a-sky>
+        <a-plane src="#groundTexture" rotation="-90 0 0" position="0 -0.01 0" height="100" width="100" material="" geometry=""></a-plane>
+        <a-sphere position="25.849 115.27 -42.99" material="shader: portal;color:#ffffff" geometry="radius: 5"> </a-sphere>
+        <!-- <a-light type="directional" intensity="0.9" position="-1 -2 2" light=""></a-light> -->
+        <!-- <a-light type="ambient" intensity="1.0" position="2 1 -1" light=""></a-light> -->
         <a-entity id="citybase1" position="-3.219 0 -22.440" sound="src: url(cityambiance.mp3); loop:true; autoplay:true;">
             <!-- <a-entity id="parkinglot" static-body="" gltf-model="parkinglot/ParkingLot.gltf" position="12.54615 0 -30.922" scale="5 5 5"></a-entity> -->
             <!-- <a-entity static-body gltf-model="rio/model.gltf" position="0.000 5 14.219"></a-entity> -->
@@ -577,7 +582,7 @@
             </a-entity>
             <a-entity id="car1" scale="0.1 0.1 0.1" obj-model="mtl: street/Lowpoly_City_Free_Pack.mtl; obj: street/car1.obj" position="21.645 2.469 19" rotation="0 45 0"></a-entity>
         </a-entity>
-
+        <a-entity geometry="" material="side: double; emissive: #ffffff" rotation="90 0 0" scale="0.2 0.59 0.1" light="intensity: 0.3; type: point" id="streetlight" position="-9.09 5.48554 -3.83736"></a-entity>
     </a-scene>
 
     <script>
