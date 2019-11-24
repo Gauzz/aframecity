@@ -33,9 +33,7 @@
         </a-entity>
         <a-sky height="2048" radius="300" src="#skyTexture" theta-length="90" width="2048" segments-height="5" segments-width="8" material="" geometry=""></a-sky>
         <a-plane src="#groundTexture" rotation="-90 0 0" position="0 -0.01 0" height="100" width="100" material="" geometry=""></a-plane>
-        <a-sphere position="25.849 115.27 -42.99" material="shader: portal;color:#ffffff" geometry="radius: 5"> </a-sphere>
-        <!-- <a-light type="directional" intensity="0.9" position="-1 -2 2" light=""></a-light> -->
-        <!-- <a-light type="ambient" intensity="1.0" position="2 1 -1" light=""></a-light> -->
+        <a-sphere position="25.849 115.27 -42.99" material="shader:flat;color:#ffffff" geometry="radius: 3"> </a-sphere>
         <a-entity id="citybase1" position="-3.219 0 -22.440" sound="src: url(cityambiance.mp3); loop:true; autoplay:true;">
             <!-- <a-entity id="parkinglot" static-body="" gltf-model="parkinglot/ParkingLot.gltf" position="12.54615 0 -30.922" scale="5 5 5"></a-entity> -->
             <!-- <a-entity static-body gltf-model="rio/model.gltf" position="0.000 5 14.219"></a-entity> -->
@@ -200,7 +198,7 @@
                 <a-entity id="stree5-3" position="-10.248 2.469 -8.160" obj-model="obj: #colony3obj; mtl: #colony3mtl"></a-entity>
             </a-entity>
             <!-- <a-entity id="carsandbuses" position="26.736 0.000 9.337" obj-model="mtl: cars and buses/Low_Poly_City_Cars.mtl; obj: cars and buses/Low_Poly_City_Cars.obj" scale="0.004 0.004 0.004"></a-entity> -->
-            <a-entity id="hospital" position="34.72733 0.448 9.337" gltf-model="hospital/CUPIC_HOSPITAL.gltf" scale="0.004 0.004 0.004"></a-entity>
+            <!-- <a-entity id="hospital" position="34.72733 0.448 9.337" gltf-model="hospital/CUPIC_HOSPITAL.gltf" scale="0.004 0.004 0.004"></a-entity> -->
 
             <!-- <a-entity id="HOUSE1" position="-2.42986 0.018 38.11234" gltf-model="house1/CUPIC_CHALET.gltf" scale="0.004 0.004 0.004"></a-entity> -->
 
@@ -583,49 +581,116 @@
             <a-entity id="car1" scale="0.1 0.1 0.1" obj-model="mtl: street/Lowpoly_City_Free_Pack.mtl; obj: street/car1.obj" position="21.645 2.469 19" rotation="0 45 0"></a-entity>
         </a-entity>
         <a-entity id="streetlights">
-            <a-entity geometry="" material="side: double; emissive: #ffffff" rotation="90 0 0" scale="0.2 0.59 0.1" light="intensity: 0.1; type: point" id="streetlight" position="-9.09 5.48554 -3.83736"></a-entity>
-            <a-entity geometry="" material="side: double; emissive: #ffffff" rotation="90 0 0" scale="0.2 0.59 0.1" light="intensity: 0.1; type: point" id="streetlight-2" position="-17.54939 5.48554 -3.83736"></a-entity>
-            <a-entity geometry="" material="side: double; emissive: #ffffff" rotation="90 0 0" scale="0.2 0.59 0.1" light="intensity: 0.1; type: point" id="streetlight-3" position="-8.82924 5.48554 4.50513"></a-entity>
-            <a-entity geometry="" material="side: double; emissive: #ffffff" rotation="90 0 0" scale="0.2 0.59 0.1" light="intensity: 0.1; type: point" id="streetlight-4" position="-17.35586 5.48554 4.50204"></a-entity>
+            <a-entity geometry="" material="side: double; emissive: #ffffff" rotation="90 0 0" scale="0.2 0.59 0.1" light="intensity: 0.1; type: point; distance: 25" id="streetlight" position="-9.09 5.48554 -3.83736"></a-entity>
+            <a-entity geometry="" material="side: double; emissive: #ffffff" rotation="90 0 0" scale="0.2 0.59 0.1" light="intensity: 0.1; type: point; distance: 25" id="streetlight-2" position="-17.54939 5.48554 -3.83736"></a-entity>
+            <a-entity geometry="" material="side: double; emissive: #ffffff" rotation="90 0 0" scale="0.2 0.59 0.1" light="intensity: 0.1; type: point; distance: 25" id="streetlight-3" position="-8.82924 5.48554 4.50513"></a-entity>
+            <a-entity geometry="" material="side: double; emissive: #ffffff" rotation="90 0 0" scale="0.2 0.59 0.1" light="intensity: 0.1; type: point; distance: 25" id="streetlight-4" position="-17.35586 5.48554 4.50204"></a-entity>
         </a-entity>
         <a-entity id="streetlights-2" position="43.56 0 0">
-            <a-entity geometry="" material="side: double; emissive: #ffffff" rotation="90 0 0" scale="0.2 0.59 0.1" light="intensity: 0.1; type: point" id="streetlight" position="-9.09 5.48554 -3.83736"></a-entity>
-            <a-entity geometry="" material="side: double; emissive: #ffffff" rotation="90 0 0" scale="0.2 0.59 0.1" light="intensity: 0.1; type: point" id="streetlight-2" position="-17.54939 5.48554 -3.83736"></a-entity>
-            <a-entity geometry="" material="side: double; emissive: #ffffff" rotation="90 0 0" scale="0.2 0.59 0.1" light="intensity: 0.1; type: point" id="streetlight-3" position="-8.82924 5.48554 4.50513"></a-entity>
-            <a-entity geometry="" material="side: double; emissive: #ffffff" rotation="90 0 0" scale="0.2 0.59 0.1" light="intensity: 0.1; type: point" id="streetlight-4" position="-17.35586 5.48554 4.50204"></a-entity>
+            <a-entity geometry="" material="side: double; emissive: #ffffff" rotation="90 0 0" scale="0.2 0.59 0.1" light="intensity: 0.1; type: point; distance: 25" id="streetlight" position="-9.09 5.48554 -3.83736"></a-entity>
+            <a-entity geometry="" material="side: double; emissive: #ffffff" rotation="90 0 0" scale="0.2 0.59 0.1" light="intensity: 0.1; type: point; distance: 25" id="streetlight-2" position="-17.54939 5.48554 -3.83736"></a-entity>
+            <a-entity geometry="" material="side: double; emissive: #ffffff" rotation="90 0 0" scale="0.2 0.59 0.1" light="intensity: 0.1; type: point; distance: 25" id="streetlight-3" position="-8.82924 5.48554 4.50513"></a-entity>
+            <a-entity geometry="" material="side: double; emissive: #ffffff" rotation="90 0 0" scale="0.2 0.59 0.1" light="intensity: 0.1; type: point; distance: 25" id="streetlight-4" position="-17.35586 5.48554 4.50204"></a-entity>
         </a-entity>
         <a-entity id="streetlights-3">
-            <a-entity geometry="" material="side: double; emissive: #ffffff" rotation="90 0 0" scale="0.2 0.59 0.1" light="intensity: 0.1; type: point" id="streetlight-5" position="-17.34532 5.48554 20.54439"></a-entity>
-            <a-entity geometry="" material="side: double; emissive: #ffffff" rotation="90 0 0" scale="0.2 0.59 0.1" light="intensity: 0.1; type: point" id="streetlight-6" position="-8.88577 5.48554 20.604"></a-entity>
+            <a-entity geometry="" material="side: double; emissive: #ffffff" rotation="90 0 0" scale="0.2 0.59 0.1" light="intensity: 0.1; type: point; distance: 25" id="streetlight-5" position="-17.34532 5.48554 20.54439"></a-entity>
+            <a-entity geometry="" material="side: double; emissive: #ffffff" rotation="90 0 0" scale="0.2 0.59 0.1" light="intensity: 0.1; type: point; distance: 25" id="streetlight-6" position="-8.88577 5.48554 20.604"></a-entity>
         </a-entity>
         <a-entity id="streetlights-4" position="43.59 0 0">
-            <a-entity geometry="" material="side: double; emissive: #ffffff" rotation="90 0 0" scale="0.2 0.59 0.1" light="intensity: 0.1; type: point" id="streetlight-5" position="-17.34532 5.48554 20.54439"></a-entity>
-            <a-entity geometry="" material="side: double; emissive: #ffffff" rotation="90 0 0" scale="0.2 0.59 0.1" light="intensity: 0.1; type: point" id="streetlight-6" position="-8.88577 5.48554 20.604"></a-entity>
+            <a-entity geometry="" material="side: double; emissive: #ffffff" rotation="90 0 0" scale="0.2 0.59 0.1" light="intensity: 0.1; type: point; distance: 25" id="streetlight-5" position="-17.34532 5.48554 20.54439"></a-entity>
+            <a-entity geometry="" material="side: double; emissive: #ffffff" rotation="90 0 0" scale="0.2 0.59 0.1" light="intensity: 0.1; type: point; distance: 25" id="streetlight-6" position="-8.88577 5.48554 20.604"></a-entity>
         </a-entity>
         <a-entity id="streetlights-7">
             <a-entity id="streetlights-5" position="43.50616 0 -43.4463">
-                <a-entity geometry="" material="side: double; emissive: #ffffff" rotation="90 0 0" scale="0.2 0.59 0.1" light="intensity: 0.1; type: point" id="streetlight-3" position="-8.82924 5.48554 4.50513"></a-entity>
-                <a-entity geometry="" material="side: double; emissive: #ffffff" rotation="90 0 0" scale="0.2 0.59 0.1" light="intensity: 0.1; type: point" id="streetlight-4" position="-17.35586 5.48554 4.50204"></a-entity>
+                <a-entity geometry="" material="side: double; emissive: #ffffff" rotation="90 0 0" scale="0.2 0.59 0.1" light="intensity: 0.1; type: point; distance: 25" id="streetlight-3" position="-8.82924 5.48554 4.50513"></a-entity>
+                <a-entity geometry="" material="side: double; emissive: #ffffff" rotation="90 0 0" scale="0.2 0.59 0.1" light="intensity: 0.1; type: point; distance: 25" id="streetlight-4" position="-17.35586 5.48554 4.50204"></a-entity>
             </a-entity>
             <a-entity id="streetlights-6" position="43.53 0 -43.591">
-                <a-entity geometry="" material="side: double; emissive: #ffffff" rotation="90 0 0" scale="0.2 0.59 0.1" light="intensity: 0.1; type: point" id="streetlight-5" position="-17.34532 5.48554 20.54439"></a-entity>
-                <a-entity geometry="" material="side: double; emissive: #ffffff" rotation="90 0 0" scale="0.2 0.59 0.1" light="intensity: 0.1; type: point" id="streetlight-6" position="-8.88577 5.48554 20.604"></a-entity>
+                <a-entity geometry="" material="side: double; emissive: #ffffff" rotation="90 0 0" scale="0.2 0.59 0.1" light="intensity: 0.1; type: point; distance: 25" id="streetlight-5" position="-17.34532 5.48554 20.54439"></a-entity>
+                <a-entity geometry="" material="side: double; emissive: #ffffff" rotation="90 0 0" scale="0.2 0.59 0.1" light="intensity: 0.1; type: point; distance: 25" id="streetlight-6" position="-8.88577 5.48554 20.604"></a-entity>
             </a-entity>
         </a-entity>
         <a-entity id="streetlights-8" position="-43.58 0 0">
             <a-entity id="streetlights-5" position="43.50616 0 -43.4463">
-                <a-entity geometry="" material="side: double; emissive: #ffffff" rotation="90 0 0" scale="0.2 0.59 0.1" light="intensity: 0.1; type: point" id="streetlight-3" position="-8.82924 5.48554 4.50513"></a-entity>
-                <a-entity geometry="" material="side: double; emissive: #ffffff" rotation="90 0 0" scale="0.2 0.59 0.1" light="intensity: 0.1; type: point" id="streetlight-4" position="-17.35586 5.48554 4.50204"></a-entity>
+                <a-entity geometry="" material="side: double; emissive: #ffffff" rotation="90 0 0" scale="0.2 0.59 0.1" light="intensity: 0.1; type: point; distance: 25" id="streetlight-3" position="-8.82924 5.48554 4.50513"></a-entity>
+                <a-entity geometry="" material="side: double; emissive: #ffffff" rotation="90 0 0" scale="0.2 0.59 0.1" light="intensity: 0.1; type: point; distance: 25" id="streetlight-4" position="-17.35586 5.48554 4.50204"></a-entity>
             </a-entity>
             <a-entity id="streetlights-6" position="43.53 0 -43.591">
-                <a-entity geometry="" material="side: double; emissive: #ffffff" rotation="90 0 0" scale="0.2 0.59 0.1" light="intensity: 0.1; type: point" id="streetlight-5" position="-17.34532 5.48554 20.54439"></a-entity>
-                <a-entity geometry="" material="side: double; emissive: #ffffff" rotation="90 0 0" scale="0.2 0.59 0.1" light="intensity: 0.1; type: point" id="streetlight-6" position="-8.88577 5.48554 20.604"></a-entity>
+                <a-entity geometry="" material="side: double; emissive: #ffffff" rotation="90 0 0" scale="0.2 0.59 0.1" light="intensity: 0.1; type: point; distance: 25" id="streetlight-5" position="-17.34532 5.48554 20.54439"></a-entity>
+                <a-entity geometry="" material="side: double; emissive: #ffffff" rotation="90 0 0" scale="0.2 0.59 0.1" light="intensity: 0.1; type: point; distance: 25" id="streetlight-6" position="-8.88577 5.48554 20.604"></a-entity>
             </a-entity>
         </a-entity>
-        <a-entity id="streetlights-9" position="0.05976 0 43.394">
-            <a-entity geometry="" material="side: double; emissive: #ffffff" rotation="90 0 0" scale="0.2 0.59 0.1" light="intensity: 0.1; type: point" id="streetlight" position="-9.09 5.48554 -3.83736"></a-entity>
-            <a-entity geometry="" material="side: double; emissive: #ffffff" rotation="90 0 0" scale="0.2 0.59 0.1" light="intensity: 0.1; type: point" id="streetlight-2" position="-17.54939 5.48554 -3.83736"></a-entity>
+        <a-entity id="streetlights-12">
+            <a-entity id="streetlights-9" position="0.05976 0 43.394">
+                <a-entity geometry="" material="side: double; emissive: #ffffff" rotation="90 0 0" scale="0.2 0.59 0.1" light="intensity: 0.1; type: point; distance: 25" id="streetlight" position="-9.09 5.48554 -3.83736"></a-entity>
+                <a-entity geometry="" material="side: double; emissive: #ffffff" rotation="90 0 0" scale="0.2 0.59 0.1" light="intensity: 0.1; type: point; distance: 25" id="streetlight-2" position="-17.54939 5.48554 -3.83736"></a-entity>
+            </a-entity>
+
+            <a-entity geometry="" material="side: double; emissive: #ffffff" rotation="90 0 0" scale="0.2 0.59 0.1" light="intensity: 0.1; type: point; distance: 25" id="streetlight-10" position="-17.48567 5.48554 23.47308"></a-entity>
+            <a-entity geometry="" material="side: double; emissive: #ffffff" rotation="90 0 0" scale="0.2 0.59 0.1" light="intensity: 0.1; type: point; distance: 25" id="streetlight-11" position="-8.97525 5.48554 23.47308"></a-entity>
         </a-entity>
+        <a-entity id="streetlights-13" position="43.585 0 0">
+            <a-entity id="streetlights-9" position="0.05976 0 43.394">
+                <a-entity geometry="" material="side: double; emissive: #ffffff" rotation="90 0 0" scale="0.2 0.59 0.1" light="intensity: 0.1; type: point; distance: 25; distance: 25" id="streetlight" position="-9.09 5.48554 -3.83736"></a-entity>
+                <a-entity geometry="" material="side: double; emissive: #ffffff" rotation="90 0 0" scale="0.2 0.59 0.1" light="intensity: 0.1; type: point; distance: 25" id="streetlight-2" position="-17.54939 5.48554 -3.83736"></a-entity>
+            </a-entity>
+
+            <a-entity geometry="" material="side: double; emissive: #ffffff" rotation="90 0 0" scale="0.2 0.59 0.1" light="intensity: 0.1; type: point; distance: 25" id="streetlight-10" position="-17.48567 5.48554 23.47308"></a-entity>
+            <a-entity geometry="" material="side: double; emissive: #ffffff" rotation="90 0 0" scale="0.2 0.59 0.1" light="intensity: 0.1; type: point; distance: 25" id="streetlight-11" position="-8.97525 5.48554 23.47308"></a-entity>
+        </a-entity>
+        <a-entity id="streetlights-14" position="-0.067 0 -16.079">
+            <a-entity geometry="" material="side: double; emissive: #ffffff" rotation="90 0 0" scale="0.2 0.59 0.1" light="intensity: 0.1; type: point; distance: 25" id="streetlight" position="-9.09 5.48554 -3.83736"></a-entity>
+            <a-entity geometry="" material="side: double; emissive: #ffffff" rotation="90 0 0" scale="0.2 0.59 0.1" light="intensity: 0.1; type: point; distance: 25" id="streetlight-2" position="-17.54939 5.48554 -3.83736"></a-entity>
+        </a-entity>
+        <a-entity id="streetlights-15" position="43.552 0 -16.079">
+            <a-entity geometry="" material="side: double; emissive: #ffffff" rotation="90 0 0" scale="0.2 0.59 0.1" light="intensity: 0.1; type: point; distance: 25" id="streetlight" position="-9.09 5.48554 -3.83736"></a-entity>
+            <a-entity geometry="" material="side: double; emissive: #ffffff" rotation="90 0 0" scale="0.2 0.59 0.1" light="intensity: 0.1; type: point; distance: 25" id="streetlight-2" position="-17.54939 5.48554 -3.83736"></a-entity>
+        </a-entity>
+        <a-entity geometry="" material="side: double; emissive: #ffffff" rotation="90 0 0" scale="0.59 0.2 0.1" light="intensity: 0.1; type: point; distance: 25" id="streetlight-16" position="-39.96262 6.05338 31.8733"></a-entity>
+        <a-entity id="streetlights-20">
+            <a-entity geometry="" material="side: double; emissive: #ffffff" rotation="90 0 0" scale="0.59 0.2 0.1" light="intensity: 0.1; type: point; distance: 25" id="streetlight-17" position="-39.89078 5.48554 17.444"></a-entity>
+            <a-entity geometry="" material="side: double; emissive: #ffffff" rotation="90 0 0" scale="0.59 0.2 0.1" light="intensity: 0.1; type: point; distance: 25" id="streetlight-18" position="-39.876 5.48554 7.723"></a-entity>
+        </a-entity>
+        <a-entity id="streetlights-22">
+            <a-entity geometry="" material="side: double; emissive: #ffffff" rotation="90 0 0" scale="0.59 0.2 0.1" light="intensity: 0.1; type: point; distance: 25" id="streetlight-19" position="-40.089 6.05338 -11.62415"></a-entity>
+            <a-entity id="streetlights-21" position="-0.21 0 -43.503">
+                <a-entity geometry="" material="side: double; emissive: #ffffff" rotation="90 0 0" scale="0.59 0.2 0.1" light="intensity: 0.1; type: point; distance: 25" id="streetlight-17" position="-39.89078 5.48554 17.444"></a-entity>
+                <a-entity geometry="" material="side: double; emissive: #ffffff" rotation="90 0 0" scale="0.59 0.2 0.1" light="intensity: 0.1; type: point; distance: 25" id="streetlight-18" position="-39.876 5.48554 7.723"></a-entity>
+            </a-entity>
+        </a-entity>
+        <a-entity id="streetlights-23" position="43.4573 0 -0.14">
+            <a-entity geometry="" material="side: double; emissive: #ffffff" rotation="90 0 0" scale="0.59 0.2 0.1" light="intensity: 0.1; type: point; distance: 25" id="streetlight-19" position="-40.089 6.05338 -11.62415"></a-entity>
+            <a-entity id="streetlights-21" position="-0.21 0 -43.503">
+                <a-entity geometry="" material="side: double; emissive: #ffffff" rotation="90 0 0" scale="0.59 0.2 0.1" light="intensity: 0.1; type: point; distance: 25" id="streetlight-17" position="-39.89078 5.48554 17.444"></a-entity>
+                <a-entity geometry="" material="side: double; emissive: #ffffff" rotation="90 0 0" scale="0.59 0.2 0.1" light="intensity: 0.1; type: point; distance: 25" id="streetlight-18" position="-39.876 5.48554 7.723"></a-entity>
+            </a-entity>
+        </a-entity>
+        <a-entity id="streetlights-24" position="43.557 0 43.454">
+            <a-entity geometry="" material="side: double; emissive: #ffffff" rotation="90 0 0" scale="0.59 0.2 0.1" light="intensity: 0.1; type: point; distance: 25" id="streetlight-19" position="-40.089 6.05338 -11.62415"></a-entity>
+            <a-entity id="streetlights-21" position="-0.21 0 -43.503">
+                <a-entity geometry="" material="side: double; emissive: #ffffff" rotation="90 0 0" scale="0.59 0.2 0.1" light="intensity: 0.1; type: point; distance: 25" id="streetlight-17" position="-39.89078 5.48554 17.444"></a-entity>
+                <a-entity geometry="" material="side: double; emissive: #ffffff" rotation="90 0 0" scale="0.59 0.2 0.1" light="intensity: 0.1; type: point; distance: 25" id="streetlight-18" position="-39.876 5.48554 7.723"></a-entity>
+            </a-entity>
+        </a-entity>
+        <a-entity id="streetlight-23">
+            <a-entity geometry="" material="side: double; emissive: #ffffff" rotation="90 0 0" scale="0.59 0.2 0.1" light="intensity: 0.1; type: point; distance: 25" id="streetlight-20" position="19.61 5.506 7.676"></a-entity>
+            <a-entity geometry="" material="side: double; emissive: #ffffff" rotation="90 0 0" scale="0.59 0.2 0.1" light="intensity: 0.1; type: point; distance: 25" id="streetlight-21" position="14.755 6.04766 25.997"></a-entity>
+            <a-entity geometry="" material="side: double; emissive: #ffffff" rotation="90 0 0" scale="0.59 0.2 0.1" light="intensity: 0.1; type: point; distance: 25" id="streetlight-22" position="14.755 6.04766 36.99588"></a-entity>
+        </a-entity>
+        <a-entity id="streetlight-24" position="0 0 -43.56765">
+            <a-entity geometry="" material="side: double; emissive: #ffffff" rotation="90 0 0" scale="0.59 0.2 0.1" light="intensity: 0.1; type: point; distance: 25" id="streetlight-20" position="19.61 5.506 7.676"></a-entity>
+            <a-entity geometry="" material="side: double; emissive: #ffffff" rotation="90 0 0" scale="0.59 0.2 0.1" light="intensity: 0.1; type: point; distance: 25" id="streetlight-21" position="14.755 6.04766 25.997"></a-entity>
+            <a-entity geometry="" material="side: double; emissive: #ffffff" rotation="90 0 0" scale="0.59 0.2 0.1" light="intensity: 0.1; type: point; distance: 25" id="streetlight-22" position="14.755 6.04766 36.99588"></a-entity>
+        </a-entity>
+        <a-entity id="streetlight-25" position="-43.583 0 -43.474">
+            <a-entity geometry="" material="side: double; emissive: #ffffff" rotation="90 0 0" scale="0.59 0.2 0.1" light="intensity: 0.1; type: point; distance: 25" id="streetlight-20" position="19.61 5.506 7.676"></a-entity>
+            <a-entity geometry="" material="side: double; emissive: #ffffff" rotation="90 0 0" scale="0.59 0.2 0.1" light="intensity: 0.1; type: point; distance: 25" id="streetlight-21" position="14.755 6.04766 25.997"></a-entity>
+            <a-entity geometry="" material="side: double; emissive: #ffffff" rotation="90 0 0" scale="0.59 0.2 0.1" light="intensity: 0.1; type: point; distance: 25" id="streetlight-22" position="14.755 6.04766 36.99588"></a-entity>
+        </a-entity>
+        <a-entity id="streetlight-26" position="-43.583 0 0.068">
+            <a-entity geometry="" material="side: double; emissive: #ffffff" rotation="90 0 0" scale="0.59 0.2 0.1" light="intensity: 0.1; type: point; distance: 25" id="streetlight-20" position="19.61 5.506 7.676"></a-entity>
+            <a-entity geometry="" material="side: double; emissive: #ffffff" rotation="90 0 0" scale="0.59 0.2 0.1" light="intensity: 0.1; type: point; distance: 25" id="streetlight-21" position="14.755 6.04766 25.997"></a-entity>
+            <a-entity geometry="" material="side: double; emissive: #ffffff" rotation="90 0 0" scale="0.59 0.2 0.1" light="intensity: 0.1; type: point; distance: 25" id="streetlight-22" position="14.755 6.04766 36.99588"></a-entity>
         </a-entity>
 
     </a-scene>
