@@ -4,19 +4,14 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <title></title>
-    <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="">
     <script src="https://aframe.io/releases/0.9.1/aframe.min.js"></script>
     <script src="https://cdn.rawgit.com/donmccurdy/aframe-extras/v5.0.0/dist/aframe-extras.min.js"></script>
-    <script src="https//cdn.rawgit.com/donmccurdy/aframe-physics-system/v4.0.1/dist/aframe-physics-system.min.js"></script>
-    <script src="https://unpkg.com/aframe-environment-component@1.1.0/dist/aframe-environment-component.min.js"></script>
+
 </head>
 
 <body>
-
-
-    <a-scene physics="debug: true">
+    <a-scene>
         <a-assets>
             <a-asset-item id="colony3obj" src="street2/model.obj"></a-asset-item>
             <a-asset-item id="colony3mtl" src="street/Lowpoly_City_Free_Pack.mtl"></a-asset-item>
@@ -25,197 +20,33 @@
                   Your browser does not support the audio element.
                   </audio>
             <img id="testTex" src="test.png">
-            <a-mixin id="floorMat" material="color:#BBB"></a-mixin><img id="groundTexture" src="https://cdn.aframe.io/a-painter/images/floor.jpg" crossorigin="anonymous"><img id="skyTexture" src="https://cdn.aframe.io/a-painter/images/sky.jpg" crossorigin="anonymous">
+            <a-mixin id="floorMat" material="color:#BBB"></a-mixin>
+            <img id="groundTexture" src="https://aframe.io/sample-assets/assets/images/terrain/grasslight-big.jpg" crossorigin="anonymous">
+            <img id="skyTexture" src="https://cdn.aframe.io/a-painter/images/sky.jpg" crossorigin="anonymous">
         </a-assets>
         <a-sound src="src:#aud" loop="true" autoplay="true" position="0 0.311 5"></a-sound>
         <a-entity position="0 0 0" look-controls movement-controls="speed:0.1">
             <a-entity camera position="0 0.690 0"></a-entity>
         </a-entity>
-        <a-sky height="2048" radius="300" src="#skyTexture" theta-length="90" width="2048" segments-height="5" segments-width="8" material="" geometry=""></a-sky>
-        <a-plane src="#groundTexture" rotation="-90 0 0" position="0 -0.01 0" height="100" width="100" material="" geometry=""></a-plane>
+
+        <a-sky color="#87ceeb "></a-sky>
+        <a-plane src="#groundTexture" rotation="-90 0 0" position="0 -0.05 0" height="500" width="500" material="repeat: 200 200" geometry="" scale="1 1 1"></a-plane>
         <a-sphere position="25.849 115.27 -42.99" material="shader:flat;color:#ffffff" geometry="radius: 3"> </a-sphere>
         <a-entity id="citybase1" position="-3.219 0 -22.440" sound="src: url(cityambiance.mp3); loop:true; autoplay:true;">
-            <!-- <a-entity id="parkinglot" static-body="" gltf-model="parkinglot/ParkingLot.gltf" position="12.54615 0 -30.922" scale="5 5 5"></a-entity> -->
-            <!-- <a-entity static-body gltf-model="rio/model.gltf" position="0.000 5 14.219"></a-entity> -->
-            <!-- <a-entity id="street" position="7.115 0 -0.617" rotation="0 90 0">  
-          <a-entity id="buildings1" scale="2.0 2.0 2.0">
-            <a-entity static-body scale="0.01 0.01 0.01" gltf-model="skyscraper/Skycraper_173.gltf" position="1.183 0.00 -3.132"></a-entity>
-            <a-entity static-body scale="0.01 0.01 0.01" gltf-model="skyscraper/Skycraper_173.gltf" position="3.741 0.00 -3.132"></a-entity>
-            <a-entity static-body scale="0.01 0.01 0.01" gltf-model="skyscraper/Skycraper_173.gltf" position="6.299 0.00 -3.132"></a-entity>
-            <a-entity static-body scale="0.01 0.01 0.01" gltf-model="skyscraper/Skycraper_173.gltf" position="8.857 0.00 -3.132"></a-entity>
-            <a-entity static-body scale="0.01 0.01 0.01" gltf-model="skyscraper/Skycraper_173.gltf" position="11.415 0.00 -3.132"></a-entity>
-          </a-entity>
-        
-          <a-entity static-body="" id="car" gltf-model="car/1377 Car.gltf" scale="0.008 0.008 0.008" position="0.6145 0.02714 -5.13446" rotation="0 90 0"></a-entity>
-          <a-entity id="car2" gltf-model="car2/model.gltf" scale="0.13 0.13 0.13" rotation="0 180 0" position="3.93892 0.2 -5.56472"></a-entity>
-        
-        
-          <a-entity id="buildings2" scale="2.0 2.0 2.0" rotation="0 180.000 0" position="25.768 0 -9.530">
-                <a-entity static-body="" scale="0.01 0.01 0.01" gltf-model="skyscraper/Skycraper_173.gltf" position="1.183 0 -3.132"></a-entity>
-                <a-entity static-body="" scale="0.01 0.01 0.01" gltf-model="skyscraper/Skycraper_173.gltf" position="3.741 0 -3.132"></a-entity>
-                <a-entity static-body="" scale="0.01 0.01 0.01" gltf-model="skyscraper/Skycraper_173.gltf" position="6.299 0 -3.132"></a-entity>
-                <a-entity static-body="" scale="0.01 0.01 0.01" gltf-model="skyscraper/Skycraper_173.gltf" position="8.857 0 -3.132"></a-entity>
-                <a-entity static-body="" scale="0.01 0.01 0.01" gltf-model="skyscraper/Skycraper_173.gltf" position="11.415 0 -3.132"></a-entity>
-              </a-entity>
-            </a-entity>   
-
-          <a-entity id="street2" position="4.628 0 7.632" rotation="0 0 0">  
-              <a-entity id="buildings11" scale="2.0 2.0 2.0">
-                <a-entity static-body scale="0.01 0.01 0.01" gltf-model="skyscraper/Skycraper_173.gltf" position="1.183 0.00 -3.132"></a-entity>
-                <a-entity static-body scale="0.01 0.01 0.01" gltf-model="skyscraper/Skycraper_173.gltf" position="3.741 0.00 -3.132"></a-entity>
-                <a-entity static-body scale="0.01 0.01 0.01" gltf-model="skyscraper/Skycraper_173.gltf" position="6.299 0.00 -3.132"></a-entity>
-                <a-entity static-body scale="0.01 0.01 0.01" gltf-model="skyscraper/Skycraper_173.gltf" position="8.857 0.00 -3.132"></a-entity>
-                <a-entity static-body scale="0.01 0.01 0.01" gltf-model="skyscraper/Skycraper_173.gltf" position="11.415 0.00 -3.132"></a-entity>
-              </a-entity>
-            
-              <a-entity static-body="" id="car1" gltf-model="car/1377 Car.gltf" scale="0.008 0.008 0.008" position="0.6145 0.02714 -5.13446" rotation="0 90 0"></a-entity>
-              <a-entity id="car21" gltf-model="car2/model.gltf" scale="0.13 0.13 0.13" rotation="0 180 0" position="3.93892 0.2 -5.56472"></a-entity>
-            
-            
-              <a-entity id="buildings21" scale="2.0 2.0 2.0" rotation="0 180.000 0" position="25.768 0 -9.530">
-                    <a-entity static-body="" scale="0.01 0.01 0.01" gltf-model="skyscraper/Skycraper_173.gltf" position="1.183 0 -3.132"></a-entity>
-                    <a-entity static-body="" scale="0.01 0.01 0.01" gltf-model="skyscraper/Skycraper_173.gltf" position="3.741 0 -3.132"></a-entity>
-                    <a-entity static-body="" scale="0.01 0.01 0.01" gltf-model="skyscraper/Skycraper_173.gltf" position="6.299 0 -3.132"></a-entity>
-                    <a-entity static-body="" scale="0.01 0.01 0.01" gltf-model="skyscraper/Skycraper_173.gltf" position="8.857 0 -3.132"></a-entity>
-                    <a-entity static-body="" scale="0.01 0.01 0.01" gltf-model="skyscraper/Skycraper_173.gltf" position="11.415 0 -3.132"></a-entity>
-                  </a-entity>
-            </a-entity>   
-
-          <a-entity id="street3" position="0 0 -1.479" rotation="0 180 0">  
-                  <a-entity id="buildings12" scale="2.0 2.0 2.0">
-                    <a-entity static-body scale="0.01 0.01 0.01" gltf-model="skyscraper/Skycraper_173.gltf" position="1.183 0.00 -3.132"></a-entity>
-                    <a-entity static-body scale="0.01 0.01 0.01" gltf-model="skyscraper/Skycraper_173.gltf" position="3.741 0.00 -3.132"></a-entity>
-                    <a-entity static-body scale="0.01 0.01 0.01" gltf-model="skyscraper/Skycraper_173.gltf" position="6.299 0.00 -3.132"></a-entity>
-                    <a-entity static-body scale="0.01 0.01 0.01" gltf-model="skyscraper/Skycraper_173.gltf" position="8.857 0.00 -3.132"></a-entity>
-                    <a-entity static-body scale="0.01 0.01 0.01" gltf-model="skyscraper/Skycraper_173.gltf" position="11.415 0.00 -3.132"></a-entity>
-                  </a-entity>
-                
-                  <a-entity static-body="" id="car2" gltf-model="car/1377 Car.gltf" scale="0.008 0.008 0.008" position="0.6145 0.02714 -5.13446" rotation="0 90 0"></a-entity>
-                  <a-entity id="car22" gltf-model="car2/model.gltf" scale="0.13 0.13 0.13" rotation="0 180 0" position="3.93892 0.2 -5.56472"></a-entity>
-                
-                
-                  <a-entity id="buildings22" scale="2.0 2.0 2.0" rotation="0 180.000 0" position="25.768 0 -9.530">
-                        <a-entity static-body="" scale="0.01 0.01 0.01" gltf-model="skyscraper/Skycraper_173.gltf" position="1.183 0 -3.132"></a-entity>
-                        <a-entity static-body="" scale="0.01 0.01 0.01" gltf-model="skyscraper/Skycraper_173.gltf" position="3.741 0 -3.132"></a-entity>
-                        <a-entity static-body="" scale="0.01 0.01 0.01" gltf-model="skyscraper/Skycraper_173.gltf" position="6.299 0 -3.132"></a-entity>
-                        <a-entity static-body="" scale="0.01 0.01 0.01" gltf-model="skyscraper/Skycraper_173.gltf" position="8.857 0 -3.132"></a-entity>
-                        <a-entity static-body="" scale="0.01 0.01 0.01" gltf-model="skyscraper/Skycraper_173.gltf" position="11.415 0 -3.132"></a-entity>
-                      </a-entity>
-            </a-entity>   
-    
-          <a-entity id="street4" position="-2.577 0 6.887" rotation="0 -90 0">  
-                      <a-entity id="buildings13" scale="2.0 2.0 2.0">
-                        <a-entity static-body scale="0.01 0.01 0.01" gltf-model="skyscraper/Skycraper_173.gltf" position="1.183 0.00 -3.132"></a-entity>
-                        <a-entity static-body scale="0.01 0.01 0.01" gltf-model="skyscraper/Skycraper_173.gltf" position="3.741 0.00 -3.132"></a-entity>
-                        <a-entity static-body scale="0.01 0.01 0.01" gltf-model="skyscraper/Skycraper_173.gltf" position="6.299 0.00 -3.132"></a-entity>
-                        <a-entity static-body scale="0.01 0.01 0.01" gltf-model="skyscraper/Skycraper_173.gltf" position="8.857 0.00 -3.132"></a-entity>
-                        <a-entity static-body scale="0.01 0.01 0.01" gltf-model="skyscraper/Skycraper_173.gltf" position="11.415 0.00 -3.132"></a-entity>
-                      </a-entity>
-                    
-                      <a-entity static-body="" id="car3" gltf-model="car/1377 Car.gltf" scale="0.008 0.008 0.008" position="0.6145 0.02714 -5.13446" rotation="0 90 0"></a-entity>
-                      <a-entity id="car23" gltf-model="car2/model.gltf" scale="0.13 0.13 0.13" rotation="0 180 0" position="3.93892 0.2 -5.56472"></a-entity>
-                    
-                    
-                      <a-entity id="buildings23" scale="2.0 2.0 2.0" rotation="0 180.000 0" position="25.768 0 -9.530">
-                            <a-entity static-body="" scale="0.01 0.01 0.01" gltf-model="skyscraper/Skycraper_173.gltf" position="1.183 0 -3.132"></a-entity>
-                            <a-entity static-body="" scale="0.01 0.01 0.01" gltf-model="skyscraper/Skycraper_173.gltf" position="3.741 0 -3.132"></a-entity>
-                            <a-entity static-body="" scale="0.01 0.01 0.01" gltf-model="skyscraper/Skycraper_173.gltf" position="6.299 0 -3.132"></a-entity>
-                            <a-entity static-body="" scale="0.01 0.01 0.01" gltf-model="skyscraper/Skycraper_173.gltf" position="8.857 0 -3.132"></a-entity>
-                            <a-entity static-body="" scale="0.01 0.01 0.01" gltf-model="skyscraper/Skycraper_173.gltf" position="11.415 0 -3.132"></a-entity>
-                          </a-entity>
-            </a-entity>    -->
-
-
-
-            <!-- <a-entity id="diningcar" position="8.35841 0 36.25325" gltf-model="diningcar/Diner.gltf" scale="0.2 0.2 0.2" rotation="0 90 0"></a-entity> -->
-
-
-
-            <!-- <a-entity id="colony1">
-          <a-entity id="street11" position="-8.820 3.141 -12.610" scale="1.60 1.60 1.60" gltf-model="archive (2)/model.gltf"></a-entity>
-          <a-entity id="street12" position="-8.820 3.141 -23.682" scale="1.60 1.60 1.60" gltf-model="archive (2)/model.gltf"></a-entity>
-          <a-entity id="street13" position="-23.682 3.141 -12.564" scale="1.60 1.60 1.60" gltf-model="archive (2)/model.gltf"></a-entity>
-          <a-entity id="street14" position="-23.682 3.141 -23.682" scale="1.60 1.60 1.60" gltf-model="archive (2)/model.gltf"></a-entity>
-          </a-entity>
-          <a-entity id="colony12" position="38.188 0 0">
-            <a-entity id="street11" position="-8.820 3.141 -12.610" scale="1.60 1.60 1.60" gltf-model="archive (2)/model.gltf"></a-entity>
-            <a-entity id="street12" position="-8.820 3.141 -23.682" scale="1.60 1.60 1.60" gltf-model="archive (2)/model.gltf"></a-entity>
-            <a-entity id="street13" position="-23.682 3.141 -12.564" scale="1.60 1.60 1.60" gltf-model="archive (2)/model.gltf"></a-entity>
-            <a-entity id="street14" position="-23.682 3.141 -23.682" scale="1.60 1.60 1.60" gltf-model="archive (2)/model.gltf"></a-entity>
-            </a-entity>
-          <a-entity id="colony13" position="0 0 38.188">
-              <a-entity id="street11" position="-8.820 3.141 -12.610" scale="1.60 1.60 1.60" gltf-model="archive (2)/model.gltf"></a-entity>
-              <a-entity id="street12" position="-8.820 3.141 -23.682" scale="1.60 1.60 1.60" gltf-model="archive (2)/model.gltf"></a-entity>
-              <a-entity id="street13" position="-23.682 3.141 -12.564" scale="1.60 1.60 1.60" gltf-model="archive (2)/model.gltf"></a-entity>
-              <a-entity id="street14" position="-23.682 3.141 -23.682" scale="1.60 1.60 1.60" gltf-model="archive (2)/model.gltf"></a-entity>
-              </a-entity> -->
-
-            <!-- <a-entity id="gallery" position="-17.259 -5.036 37.630" gltf-model="archive (3)/model.gltf" scale="5 5 5" ></a-entity> -->
-
-            <!-- <a-entity id="colony21">
-
-          <a-entity id="street21">
-          <a-entity id="appartment1" position="21.777 -2.574 31.541" gltf-model="archive (6)/model.gltf" scale="3 3 3" ></a-entity>
-          <a-entity id="appartment2" position="11.985 -2.574 31.541" gltf-model="archive (6)/model.gltf" scale="3 3 3" ></a-entity>
-          <a-entity id="appartment3" position="17.243 -2.574 31.541" gltf-model="archive (6)/model.gltf" scale="3 3 3" ></a-entity>
-          <a-entity id="appartment4" position="25.896 -2.574 31.541" gltf-model="archive (6)/model.gltf" scale="3 3 3" ></a-entity>
-          </a-entity>
-
-          <a-entity id="street22" position="38.216 0 54.920" rotation="0 180 0">
-            <a-entity id="appartment1" position="21.777 -2.574 31.541" gltf-model="archive (6)/model.gltf" scale="3 3 3" ></a-entity>
-            <a-entity id="appartment2" position="11.985 -2.574 31.541" gltf-model="archive (6)/model.gltf" scale="3 3 3" ></a-entity>
-            <a-entity id="appartment3" position="17.243 -2.574 31.541" gltf-model="archive (6)/model.gltf" scale="3 3 3" ></a-entity>
-            <a-entity id="appartment4" position="25.896 -2.574 31.541" gltf-model="archive (6)/model.gltf" scale="3 3 3" ></a-entity>
-          </a-entity>
-          
-          <a-entity id="street23" position="0.130 0 -8.081">
-            <a-entity id="appartment1" position="21.777 -2.574 31.541" gltf-model="archive (6)/model.gltf" scale="3 3 3" ></a-entity>
-            <a-entity id="appartment2" position="11.985 -2.574 31.541" gltf-model="archive (6)/model.gltf" scale="3 3 3" ></a-entity>
-            <a-entity id="appartment3" position="17.243 -2.574 31.541" gltf-model="archive (6)/model.gltf" scale="3 3 3" ></a-entity>
-            <a-entity id="appartment4" position="25.896 -2.574 31.541" gltf-model="archive (6)/model.gltf" scale="3 3 3" ></a-entity>
-          </a-entity>
-
-          <a-entity id="street24" position="37.970 0 46.036" rotation="0 180 0">
-            <a-entity id="appartment1" position="21.777 -2.574 31.541" gltf-model="archive (6)/model.gltf" scale="3 3 3" ></a-entity>
-            <a-entity id="appartment2" position="11.985 -2.574 31.541" gltf-model="archive (6)/model.gltf" scale="3 3 3" ></a-entity>
-            <a-entity id="appartment3" position="17.243 -2.574 31.541" gltf-model="archive (6)/model.gltf" scale="3 3 3" ></a-entity>
-            <a-entity id="appartment4" position="25.896 -2.574 31.541" gltf-model="archive (6)/model.gltf" scale="3 3 3" ></a-entity>
-          </a-entity>
-          
-          <a-entity id="street25" position="0.130 0 -18.368">
-            <a-entity id="appartment1" position="21.777 -2.574 31.541" gltf-model="archive (6)/model.gltf" scale="3 3 3" ></a-entity>
-            <a-entity id="appartment2" position="11.985 -2.574 31.541" gltf-model="archive (6)/model.gltf" scale="3 3 3" ></a-entity>
-            <a-entity id="appartment3" position="17.243 -2.574 31.541" gltf-model="archive (6)/model.gltf" scale="3 3 3" ></a-entity>
-            <a-entity id="appartment4" position="25.896 -2.574 31.541" gltf-model="archive (6)/model.gltf" scale="3 3 3" ></a-entity>
-          </a-entity>
-          
-        </a-entity> -->
-            <!-- <a-entity id="characters" position="1.73159 -1.172 38.43608" gltf-model="model_gltf_1cy6Vk2uwSU_aBN8vP2lKHR/model.gltf"></a-entity> -->
             <a-entity id="colony3" position="0 0 0">
                 <a-entity id="stree5" position="-10.141 2.469 35.361" obj-model="obj:#colony3obj; mtl: #colony3mtl" scale="1 1 1"></a-entity>
                 <a-entity id="stree5-2" position="33.436 2.469 35.275" obj-model="obj: #colony3obj; mtl: #colony3mtl"></a-entity>
                 <a-entity id="stree5-4" position="33.351 2.469 -8.302" obj-model="obj: #colony3obj; mtl: #colony3mtl"></a-entity>
                 <a-entity id="stree5-3" position="-10.248 2.469 -8.160" obj-model="obj: #colony3obj; mtl: #colony3mtl"></a-entity>
             </a-entity>
-            <!-- <a-entity id="carsandbuses" position="26.736 0.000 9.337" obj-model="mtl: cars and buses/Low_Poly_City_Cars.mtl; obj: cars and buses/Low_Poly_City_Cars.obj" scale="0.004 0.004 0.004"></a-entity> -->
-            <!-- <a-entity id="hospital" position="34.72733 0.448 9.337" gltf-model="hospital/CUPIC_HOSPITAL.gltf" scale="0.004 0.004 0.004"></a-entity> -->
-
-            <!-- <a-entity id="HOUSE1" position="-2.42986 0.018 38.11234" gltf-model="house1/CUPIC_CHALET.gltf" scale="0.004 0.004 0.004"></a-entity> -->
-
-            <!-- <a-entity id="HOUSE2" position="1.43759 0.02619 35.95197" gltf-model="house2/HouseWithDriveway.gltf" scale="0.08 0.08 0.08"></a-entity> -->
-
-            <!-- <a-entity id="HOUSE2" position="35.35548 0.02619 11.11795" gltf-model="house2/HouseWithDriveway.gltf" scale="0.08 0.08 0.08"></a-entity> -->
-            <!-- <a-entity id="housefence" position="37.45 0 11.205" gltf-model="housefence/PicketFence.gltf" scale="0.04 0.04 0.04"></a-entity> -->
 
             <a-entity id="parkedcars1" scale="0.1 0.1 0.1" position="33.74734 2.49437 -8.31992" rotation="" obj-model="mtl: street/Lowpoly_City_Free_Pack.mtl; obj: street/parkedcars.obj"></a-entity>
             <a-entity id="parkedcars2" scale="0.1 0.1 0.1" position="-10.62146 2.49437 -8.31992" rotation="" obj-model="mtl: street/Lowpoly_City_Free_Pack.mtl; obj: street/car2.obj"></a-entity>
             <a-entity position="-38.163 2.481 94.775" obj-model="mtl: street/Lowpoly_City_Free_Pack.mtl; obj: street/truck1.obj" id="truck1" scale="0.1 0.1 0.1" rotation="0 180 0"></a-entity>
             <a-entity obj-model="mtl: street/Lowpoly_City_Free_Pack.mtl; obj: street/car3.obj" scale="0.1 0.1 0.1" id="car3" position="1.432 2.474 13.299" rotation="0 101 0"></a-entity>
-            <!-- <a-entity id="bank" position="42.889 -0.298 -24.043" gltf-model="bank/Bank_1245.gltf" scale="0.04 0.04 0.04"></a-entity> -->
             <a-entity id="ambulance" position="36.08032 0.119 20.319" gltf-model="ambulance/Ambulance_01(1).gltf" scale="0.004 0.004 0.004" rotation="-90 0 0"></a-entity>
             <a-entity id="personlady" gltf-model="person/archive (2)/person three.gltf" scale="0.2 0.2 0.2" position="-6.68 0.826 5.157"></a-entity>
             <a-entity id="personcapboy" rotation="0 0 10.67" gltf-model="person/archive_(2)/PERSON 1 dec 10-1.gltf" scale="0.18 0.18 0.18" position="7.93562 0.62291 14.77371"></a-entity>
-            <!-- <a-entity id="persondoctor" gltf-model="person/archive_(3)/Doctor_01.gltf" scale="0.05 0.05 0.05" rotation="0 90 0" position="-6.11687 0.19107 1.198"></a-entity> -->
             <a-entity id="persondoctor1" gltf-model="person/archive_(3)/Doctor_01.gltf" scale="0.05 0.05 0.05" rotation="" position="-15.8175 0.19107 38.6536"></a-entity>
             <a-entity id="pair">
                 <a-entity id="persondoctor2" gltf-model="person/archive_(3)/Doctor_01.gltf" scale="0.05 0.05 0.05" rotation="0 180 0" position="-9.003 0.19107 14.477"></a-entity>
@@ -278,304 +109,302 @@
                 <a-entity id="personteacher1" position="-8.972 0.194 14.148" gltf-model="person/cowboy/scene.gltf" scale="0.15 0.15 0.15"></a-entity>
             </a-entity>
             <a-entity id="personlady-2" gltf-model="person/archive (2)/person three.gltf" scale="0.2 0.2 0.2" position="-16.17905 0.826 39.379" rotation="0 90 0"></a-entity>
-            <!-- <a-entity id="persongirl1" gltf-model="person/girl1/google poly.gltf" scale="0.4 0.4 0.4" position="2.536 -0.04056 0"></a-entity>
-        <a-entity id="persongirl2" gltf-model="person/girl2/google poly.gltf" scale="0.4 0.4 0.4" position="2.029 -0.051 0"></a-entity> -->
             <a-entity gltf-model="person/model/model.gltf" scale="0.32 0.32 0.32" id="personfarmer1" position="29.84725 0.769 15.16" rotation="0 -90 0"></a-entity>
             <a-entity id="trafficlight00">
                 <a-entity>
-                    <a-entity geometry="primitive: circle" scale="0.1 0.1 0.1" class="trafficlight1" position="-3.66013 2.57078 4.580" material=" emissive:  #ff8080;emissiveIntensity:0.75; side: double;"></a-entity>
-                    <a-entity geometry="primitive: circle" scale="0.1 0.1 0.1" class="trafficlight1" position="-3.66013 2.571 4.268" material=" emissive:  #ff8080;emissiveIntensity:0.75; side: double;"></a-entity>
+                    <a-entity geometry="primitive: circle" scale="0.1 0.1 0.1" class="trafficlight1" position="-3.66013 2.57078 4.580" material=" color: #ff8080; side: double;"></a-entity>
+                    <a-entity geometry="primitive: circle" scale="0.1 0.1 0.1" class="trafficlight1" position="-3.66013 2.571 4.268" material=" color: #ff8080; side: double;"></a-entity>
                 </a-entity>
                 <a-entity geometry="depth: 0.6; height: 0.02; width: 0.44" material="side: double; color: #292929" rotation="" id="lightcap" position="-3.656 2.86 4.40164"></a-entity>
                 <a-entity rotation="0 90 0" position="-8.08983 0 0.745">
-                    <a-entity geometry="primitive: circle" scale="0.1 0.1 0.1" class="trafficlight2" position="-3.66013 2.57078 4.58" material=" emissive: #80ff80;emissiveIntensity:0.75; side: double"></a-entity>
-                    <a-entity geometry="primitive: circle" scale="0.1 0.1 0.1" class="trafficlight2" position="-3.66013 2.571 4.268" material=" emissive: #80ff80;emissiveIntensity:0.75; side: double"></a-entity>
+                    <a-entity geometry="primitive: circle" scale="0.1 0.1 0.1" class="trafficlight2" position="-3.66013 2.57078 4.58" material=" color: #80ff80; side: double"></a-entity>
+                    <a-entity geometry="primitive: circle" scale="0.1 0.1 0.1" class="trafficlight2" position="-3.66013 2.571 4.268" material=" color: #80ff80; side: double"></a-entity>
                 </a-entity>
             </a-entity>
             <a-entity id="trafficlight01" position="0 0 -6.404">
                 <a-entity>
-                    <a-entity geometry="primitive: circle" scale="0.1 0.1 0.1" class="trafficlight1" position="-3.66013 2.57078 4.580" material=" emissive:  #ff8080;emissiveIntensity:0.75; side: double;"></a-entity>
-                    <a-entity geometry="primitive: circle" scale="0.1 0.1 0.1" class="trafficlight1" position="-3.66013 2.571 4.268" material=" emissive:  #ff8080;emissiveIntensity:0.75; side: double;"></a-entity>
+                    <a-entity geometry="primitive: circle" scale="0.1 0.1 0.1" class="trafficlight1" position="-3.66013 2.57078 4.580" material=" color: #ff8080; side: double;"></a-entity>
+                    <a-entity geometry="primitive: circle" scale="0.1 0.1 0.1" class="trafficlight1" position="-3.66013 2.571 4.268" material=" color: #ff8080; side: double;"></a-entity>
                 </a-entity>
                 <a-entity geometry="depth: 0.6; height: 0.02; width: 0.44" material="side: double; color: #292929" rotation="" id="lightcap" position="-3.656 2.86 4.40164"></a-entity>
                 <a-entity rotation="0 90 0" position="-8.08983 0 0.745">
-                    <a-entity geometry="primitive: circle" scale="0.1 0.1 0.1" class="trafficlight2" position="-3.66013 2.57078 4.58" material=" emissive: #80ff80;emissiveIntensity:0.75; side: double"></a-entity>
-                    <a-entity geometry="primitive: circle" scale="0.1 0.1 0.1" class="trafficlight2" position="-3.66013 2.571 4.268" material=" emissive: #80ff80;emissiveIntensity:0.75; side: double"></a-entity>
+                    <a-entity geometry="primitive: circle" scale="0.1 0.1 0.1" class="trafficlight2" position="-3.66013 2.57078 4.58" material=" color: #80ff80; side: double"></a-entity>
+                    <a-entity geometry="primitive: circle" scale="0.1 0.1 0.1" class="trafficlight2" position="-3.66013 2.571 4.268" material=" color: #80ff80; side: double"></a-entity>
                 </a-entity>
             </a-entity>
             <a-entity id="trafficlight02" position="-12.736 0 -6.404">
                 <a-entity>
-                    <a-entity geometry="primitive: circle" scale="0.1 0.1 0.1" class="trafficlight1" position="-3.66013 2.57078 4.580" material=" emissive:  #ff8080;emissiveIntensity:0.75; side: double;"></a-entity>
-                    <a-entity geometry="primitive: circle" scale="0.1 0.1 0.1" class="trafficlight1" position="-3.66013 2.571 4.268" material=" emissive:  #ff8080;emissiveIntensity:0.75; side: double;"></a-entity>
+                    <a-entity geometry="primitive: circle" scale="0.1 0.1 0.1" class="trafficlight1" position="-3.66013 2.57078 4.580" material=" color: #ff8080; side: double;"></a-entity>
+                    <a-entity geometry="primitive: circle" scale="0.1 0.1 0.1" class="trafficlight1" position="-3.66013 2.571 4.268" material=" color: #ff8080; side: double;"></a-entity>
                 </a-entity>
                 <a-entity geometry="depth: 0.6; height: 0.02; width: 0.44" material="side: double; color: #292929" rotation="" id="lightcap" position="-3.656 2.86 4.40164"></a-entity>
                 <a-entity rotation="0 90 0" position="-8.08983 0 0.745">
-                    <a-entity geometry="primitive: circle" scale="0.1 0.1 0.1" class="trafficlight2" position="-3.66013 2.57078 4.58" material=" emissive: #80ff80;emissiveIntensity:0.75; side: double"></a-entity>
-                    <a-entity geometry="primitive: circle" scale="0.1 0.1 0.1" class="trafficlight2" position="-3.66013 2.571 4.268" material=" emissive: #80ff80;emissiveIntensity:0.75; side: double"></a-entity>
+                    <a-entity geometry="primitive: circle" scale="0.1 0.1 0.1" class="trafficlight2" position="-3.66013 2.57078 4.58" material=" color: #80ff80; side: double"></a-entity>
+                    <a-entity geometry="primitive: circle" scale="0.1 0.1 0.1" class="trafficlight2" position="-3.66013 2.571 4.268" material=" color: #80ff80; side: double"></a-entity>
                 </a-entity>
             </a-entity>
             <a-entity id="trafficlight03" position="-18.918 0 -6.645">
                 <a-entity>
-                    <a-entity geometry="primitive: circle" scale="0.1 0.1 0.1" class="trafficlight1" position="-3.66013 2.57078 4.580" material=" emissive:  #ff8080;emissiveIntensity:0.75; side: double;"></a-entity>
-                    <a-entity geometry="primitive: circle" scale="0.1 0.1 0.1" class="trafficlight1" position="-3.66013 2.571 4.268" material=" emissive:  #ff8080;emissiveIntensity:0.75; side: double;"></a-entity>
+                    <a-entity geometry="primitive: circle" scale="0.1 0.1 0.1" class="trafficlight1" position="-3.66013 2.57078 4.580" material=" color: #ff8080; side: double;"></a-entity>
+                    <a-entity geometry="primitive: circle" scale="0.1 0.1 0.1" class="trafficlight1" position="-3.66013 2.571 4.268" material=" color: #ff8080; side: double;"></a-entity>
                 </a-entity>
                 <a-entity geometry="depth: 0.6; height: 0.02; width: 0.44" material="side: double; color: #292929" rotation="" id="lightcap" position="-3.656 2.86 4.40164"></a-entity>
                 <a-entity rotation="0 90 0" position="-8.08983 0 0.745">
-                    <a-entity geometry="primitive: circle" scale="0.1 0.1 0.1" class="trafficlight2" position="-3.66013 2.57078 4.58" material=" emissive: #80ff80;emissiveIntensity:0.75; side: double"></a-entity>
-                    <a-entity geometry="primitive: circle" scale="0.1 0.1 0.1" class="trafficlight2" position="-3.66013 2.571 4.268" material=" emissive: #80ff80;emissiveIntensity:0.75; side: double"></a-entity>
+                    <a-entity geometry="primitive: circle" scale="0.1 0.1 0.1" class="trafficlight2" position="-3.66013 2.57078 4.58" material=" color: #80ff80; side: double"></a-entity>
+                    <a-entity geometry="primitive: circle" scale="0.1 0.1 0.1" class="trafficlight2" position="-3.66013 2.571 4.268" material=" color: #80ff80; side: double"></a-entity>
                 </a-entity>
             </a-entity>
             <a-entity id="trafficlight04" position="-31.623 0 -6.627">
                 <a-entity>
-                    <a-entity geometry="primitive: circle" scale="0.1 0.1 0.1" class="trafficlight1" position="-3.66013 2.57078 4.580" material=" emissive:  #ff8080;emissiveIntensity:0.75; side: double;"></a-entity>
-                    <a-entity geometry="primitive: circle" scale="0.1 0.1 0.1" class="trafficlight1" position="-3.66013 2.571 4.268" material=" emissive:  #ff8080;emissiveIntensity:0.75; side: double;"></a-entity>
+                    <a-entity geometry="primitive: circle" scale="0.1 0.1 0.1" class="trafficlight1" position="-3.66013 2.57078 4.580" material=" color: #ff8080; side: double;"></a-entity>
+                    <a-entity geometry="primitive: circle" scale="0.1 0.1 0.1" class="trafficlight1" position="-3.66013 2.571 4.268" material=" color: #ff8080; side: double;"></a-entity>
                 </a-entity>
                 <a-entity geometry="depth: 0.6; height: 0.02; width: 0.44" material="side: double; color: #292929" rotation="" id="lightcap" position="-3.656 2.86 4.40164"></a-entity>
                 <a-entity rotation="0 90 0" position="-8.08983 0 0.745">
-                    <a-entity geometry="primitive: circle" scale="0.1 0.1 0.1" class="trafficlight2" position="-3.66013 2.57078 4.58" material=" emissive: #80ff80;emissiveIntensity:0.75; side: double"></a-entity>
-                    <a-entity geometry="primitive: circle" scale="0.1 0.1 0.1" class="trafficlight2" position="-3.66013 2.571 4.268" material=" emissive: #80ff80;emissiveIntensity:0.75; side: double"></a-entity>
+                    <a-entity geometry="primitive: circle" scale="0.1 0.1 0.1" class="trafficlight2" position="-3.66013 2.57078 4.58" material=" color: #80ff80; side: double"></a-entity>
+                    <a-entity geometry="primitive: circle" scale="0.1 0.1 0.1" class="trafficlight2" position="-3.66013 2.571 4.268" material=" color: #80ff80; side: double"></a-entity>
                 </a-entity>
             </a-entity>
             <a-entity id="trafficlight05" position="-31.509 0 24.183">
                 <a-entity>
-                    <a-entity geometry="primitive: circle" scale="0.1 0.1 0.1" class="trafficlight1" position="-3.66013 2.57078 4.580" material=" emissive:  #ff8080;emissiveIntensity:0.75; side: double;"></a-entity>
-                    <a-entity geometry="primitive: circle" scale="0.1 0.1 0.1" class="trafficlight1" position="-3.66013 2.571 4.268" material=" emissive:  #ff8080;emissiveIntensity:0.75; side: double;"></a-entity>
+                    <a-entity geometry="primitive: circle" scale="0.1 0.1 0.1" class="trafficlight1" position="-3.66013 2.57078 4.580" material=" color: #ff8080; side: double;"></a-entity>
+                    <a-entity geometry="primitive: circle" scale="0.1 0.1 0.1" class="trafficlight1" position="-3.66013 2.571 4.268" material=" color: #ff8080; side: double;"></a-entity>
                 </a-entity>
                 <a-entity geometry="depth: 0.6; height: 0.02; width: 0.44" material="side: double; color: #292929" rotation="" id="lightcap" position="-3.656 2.86 4.40164"></a-entity>
                 <a-entity rotation="0 90 0" position="-8.08983 0 0.745">
-                    <a-entity geometry="primitive: circle" scale="0.1 0.1 0.1" class="trafficlight2" position="-3.66013 2.57078 4.58" material=" emissive: #80ff80;emissiveIntensity:0.75; side: double"></a-entity>
-                    <a-entity geometry="primitive: circle" scale="0.1 0.1 0.1" class="trafficlight2" position="-3.66013 2.571 4.268" material=" emissive: #80ff80;emissiveIntensity:0.75; side: double"></a-entity>
+                    <a-entity geometry="primitive: circle" scale="0.1 0.1 0.1" class="trafficlight2" position="-3.66013 2.57078 4.58" material=" color: #80ff80; side: double"></a-entity>
+                    <a-entity geometry="primitive: circle" scale="0.1 0.1 0.1" class="trafficlight2" position="-3.66013 2.571 4.268" material=" color: #80ff80; side: double"></a-entity>
                 </a-entity>
             </a-entity>
             <a-entity id="trafficlight06" position="-31.509 0 36.883">
                 <a-entity>
-                    <a-entity geometry="primitive: circle" scale="0.1 0.1 0.1" class="trafficlight1" position="-3.66013 2.57078 4.580" material=" emissive:  #ff8080;emissiveIntensity:0.75; side: double;"></a-entity>
-                    <a-entity geometry="primitive: circle" scale="0.1 0.1 0.1" class="trafficlight1" position="-3.66013 2.571 4.268" material=" emissive:  #ff8080;emissiveIntensity:0.75; side: double;"></a-entity>
+                    <a-entity geometry="primitive: circle" scale="0.1 0.1 0.1" class="trafficlight1" position="-3.66013 2.57078 4.580" material=" color: #ff8080; side: double;"></a-entity>
+                    <a-entity geometry="primitive: circle" scale="0.1 0.1 0.1" class="trafficlight1" position="-3.66013 2.571 4.268" material=" color: #ff8080; side: double;"></a-entity>
                 </a-entity>
                 <a-entity geometry="depth: 0.6; height: 0.02; width: 0.44" material="side: double; color: #292929" rotation="" id="lightcap" position="-3.656 2.86 4.40164"></a-entity>
                 <a-entity rotation="0 90 0" position="-8.08983 0 0.745">
-                    <a-entity geometry="primitive: circle" scale="0.1 0.1 0.1" class="trafficlight2" position="-3.66013 2.57078 4.58" material=" emissive: #80ff80;emissiveIntensity:0.75; side: double"></a-entity>
-                    <a-entity geometry="primitive: circle" scale="0.1 0.1 0.1" class="trafficlight2" position="-3.66013 2.571 4.268" material=" emissive: #80ff80;emissiveIntensity:0.75; side: double"></a-entity>
+                    <a-entity geometry="primitive: circle" scale="0.1 0.1 0.1" class="trafficlight2" position="-3.66013 2.57078 4.58" material=" color: #80ff80; side: double"></a-entity>
+                    <a-entity geometry="primitive: circle" scale="0.1 0.1 0.1" class="trafficlight2" position="-3.66013 2.571 4.268" material=" color: #80ff80; side: double"></a-entity>
                 </a-entity>
             </a-entity>
             <a-entity id="trafficlight07" position="-18.803 0 36.881">
                 <a-entity>
-                    <a-entity geometry="primitive: circle" scale="0.1 0.1 0.1" class="trafficlight1" position="-3.66013 2.57078 4.580" material=" emissive:  #ff8080;emissiveIntensity:0.75; side: double;"></a-entity>
-                    <a-entity geometry="primitive: circle" scale="0.1 0.1 0.1" class="trafficlight1" position="-3.66013 2.571 4.268" material=" emissive:  #ff8080;emissiveIntensity:0.75; side: double;"></a-entity>
+                    <a-entity geometry="primitive: circle" scale="0.1 0.1 0.1" class="trafficlight1" position="-3.66013 2.57078 4.580" material=" color: #ff8080; side: double;"></a-entity>
+                    <a-entity geometry="primitive: circle" scale="0.1 0.1 0.1" class="trafficlight1" position="-3.66013 2.571 4.268" material=" color: #ff8080; side: double;"></a-entity>
                 </a-entity>
                 <a-entity geometry="depth: 0.6; height: 0.02; width: 0.44" material="side: double; color: #292929" rotation="" id="lightcap" position="-3.656 2.86 4.40164"></a-entity>
                 <a-entity rotation="0 90 0" position="-8.08983 0 0.745">
-                    <a-entity geometry="primitive: circle" scale="0.1 0.1 0.1" class="trafficlight2" position="-3.66013 2.57078 4.58" material=" emissive: #80ff80;emissiveIntensity:0.75; side: double"></a-entity>
-                    <a-entity geometry="primitive: circle" scale="0.1 0.1 0.1" class="trafficlight2" position="-3.66013 2.571 4.268" material=" emissive: #80ff80;emissiveIntensity:0.75; side: double"></a-entity>
+                    <a-entity geometry="primitive: circle" scale="0.1 0.1 0.1" class="trafficlight2" position="-3.66013 2.57078 4.58" material=" color: #80ff80; side: double"></a-entity>
+                    <a-entity geometry="primitive: circle" scale="0.1 0.1 0.1" class="trafficlight2" position="-3.66013 2.571 4.268" material=" color: #80ff80; side: double"></a-entity>
                 </a-entity>
             </a-entity>
             <a-entity id="trafficlight08" position="-12.610 0 37.113">
                 <a-entity>
-                    <a-entity geometry="primitive: circle" scale="0.1 0.1 0.1" class="trafficlight1" position="-3.66013 2.57078 4.580" material=" emissive:  #ff8080;emissiveIntensity:0.75; side: double;"></a-entity>
-                    <a-entity geometry="primitive: circle" scale="0.1 0.1 0.1" class="trafficlight1" position="-3.66013 2.571 4.268" material=" emissive:  #ff8080;emissiveIntensity:0.75; side: double;"></a-entity>
+                    <a-entity geometry="primitive: circle" scale="0.1 0.1 0.1" class="trafficlight1" position="-3.66013 2.57078 4.580" material=" color: #ff8080; side: double;"></a-entity>
+                    <a-entity geometry="primitive: circle" scale="0.1 0.1 0.1" class="trafficlight1" position="-3.66013 2.571 4.268" material=" color: #ff8080; side: double;"></a-entity>
                 </a-entity>
                 <a-entity geometry="depth: 0.6; height: 0.02; width: 0.44" material="side: double; color: #292929" rotation="" id="lightcap" position="-3.656 2.86 4.40164"></a-entity>
                 <a-entity rotation="0 90 0" position="-8.08983 0 0.745">
-                    <a-entity geometry="primitive: circle" scale="0.1 0.1 0.1" class="trafficlight2" position="-3.66013 2.57078 4.58" material=" emissive: #80ff80;emissiveIntensity:0.75; side: double"></a-entity>
-                    <a-entity geometry="primitive: circle" scale="0.1 0.1 0.1" class="trafficlight2" position="-3.66013 2.571 4.268" material=" emissive: #80ff80;emissiveIntensity:0.75; side: double"></a-entity>
+                    <a-entity geometry="primitive: circle" scale="0.1 0.1 0.1" class="trafficlight2" position="-3.66013 2.57078 4.58" material=" color: #80ff80; side: double"></a-entity>
+                    <a-entity geometry="primitive: circle" scale="0.1 0.1 0.1" class="trafficlight2" position="-3.66013 2.571 4.268" material=" color: #80ff80; side: double"></a-entity>
                 </a-entity>
             </a-entity>
             <a-entity id="trafficlight09" position="0.115 0 37.129">
                 <a-entity>
-                    <a-entity geometry="primitive: circle" scale="0.1 0.1 0.1" class="trafficlight1" position="-3.66013 2.57078 4.580" material=" emissive:  #ff8080;emissiveIntensity:0.75; side: double;"></a-entity>
-                    <a-entity geometry="primitive: circle" scale="0.1 0.1 0.1" class="trafficlight1" position="-3.66013 2.571 4.268" material=" emissive:  #ff8080;emissiveIntensity:0.75; side: double;"></a-entity>
+                    <a-entity geometry="primitive: circle" scale="0.1 0.1 0.1" class="trafficlight1" position="-3.66013 2.57078 4.580" material=" color: #ff8080; side: double;"></a-entity>
+                    <a-entity geometry="primitive: circle" scale="0.1 0.1 0.1" class="trafficlight1" position="-3.66013 2.571 4.268" material=" color: #ff8080; side: double;"></a-entity>
                 </a-entity>
                 <a-entity geometry="depth: 0.6; height: 0.02; width: 0.44" material="side: double; color: #292929" rotation="" id="lightcap" position="-3.656 2.86 4.40164"></a-entity>
                 <a-entity rotation="0 90 0" position="-8.08983 0 0.745">
-                    <a-entity geometry="primitive: circle" scale="0.1 0.1 0.1" class="trafficlight2" position="-3.66013 2.57078 4.58" material=" emissive: #80ff80;emissiveIntensity:0.75; side: double"></a-entity>
-                    <a-entity geometry="primitive: circle" scale="0.1 0.1 0.1" class="trafficlight2" position="-3.66013 2.571 4.268" material=" emissive: #80ff80;emissiveIntensity:0.75; side: double"></a-entity>
+                    <a-entity geometry="primitive: circle" scale="0.1 0.1 0.1" class="trafficlight2" position="-3.66013 2.57078 4.58" material=" color: #80ff80; side: double"></a-entity>
+                    <a-entity geometry="primitive: circle" scale="0.1 0.1 0.1" class="trafficlight2" position="-3.66013 2.571 4.268" material=" color: #80ff80; side: double"></a-entity>
                 </a-entity>
             </a-entity>
             <a-entity id="trafficlight10" position="11.974 0 -6.779">
                 <a-entity>
-                    <a-entity geometry="primitive: circle" scale="0.1 0.1 0.1" class="trafficlight1" position="-3.66013 2.57078 4.580" material=" emissive:  #ff8080;emissiveIntensity:0.75; side: double;"></a-entity>
-                    <a-entity geometry="primitive: circle" scale="0.1 0.1 0.1" class="trafficlight1" position="-3.66013 2.571 4.268" material=" emissive:  #ff8080;emissiveIntensity:0.75; side: double;"></a-entity>
+                    <a-entity geometry="primitive: circle" scale="0.1 0.1 0.1" class="trafficlight1" position="-3.66013 2.57078 4.580" material=" color: #ff8080; side: double;"></a-entity>
+                    <a-entity geometry="primitive: circle" scale="0.1 0.1 0.1" class="trafficlight1" position="-3.66013 2.571 4.268" material=" color: #ff8080; side: double;"></a-entity>
                 </a-entity>
                 <a-entity geometry="depth: 0.6; height: 0.02; width: 0.44" material="side: double; color: #292929" rotation="" id="lightcap" position="-3.656 2.86 4.40164"></a-entity>
                 <a-entity rotation="0 90 0" position="-8.08983 0 0.745">
-                    <a-entity geometry="primitive: circle" scale="0.1 0.1 0.1" class="trafficlight2" position="-3.66013 2.57078 4.58" material=" emissive: #80ff80;emissiveIntensity:0.75; side: double"></a-entity>
-                    <a-entity geometry="primitive: circle" scale="0.1 0.1 0.1" class="trafficlight2" position="-3.66013 2.571 4.268" material=" emissive: #80ff80;emissiveIntensity:0.75; side: double"></a-entity>
+                    <a-entity geometry="primitive: circle" scale="0.1 0.1 0.1" class="trafficlight2" position="-3.66013 2.57078 4.58" material=" color: #80ff80; side: double"></a-entity>
+                    <a-entity geometry="primitive: circle" scale="0.1 0.1 0.1" class="trafficlight2" position="-3.66013 2.571 4.268" material=" color: #80ff80; side: double"></a-entity>
                 </a-entity>
             </a-entity>
             <a-entity id="trafficlight11" position="24.689 0 -6.779">
                 <a-entity>
-                    <a-entity geometry="primitive: circle" scale="0.1 0.1 0.1" class="trafficlight1" position="-3.66013 2.57078 4.580" material=" emissive:  #ff8080;emissiveIntensity:0.75; side: double;"></a-entity>
-                    <a-entity geometry="primitive: circle" scale="0.1 0.1 0.1" class="trafficlight1" position="-3.66013 2.571 4.268" material=" emissive:  #ff8080;emissiveIntensity:0.75; side: double;"></a-entity>
+                    <a-entity geometry="primitive: circle" scale="0.1 0.1 0.1" class="trafficlight1" position="-3.66013 2.57078 4.580" material=" color: #ff8080; side: double;"></a-entity>
+                    <a-entity geometry="primitive: circle" scale="0.1 0.1 0.1" class="trafficlight1" position="-3.66013 2.571 4.268" material=" color: #ff8080; side: double;"></a-entity>
                 </a-entity>
                 <a-entity geometry="depth: 0.6; height: 0.02; width: 0.44" material="side: double; color: #292929" rotation="" id="lightcap" position="-3.656 2.86 4.40164"></a-entity>
                 <a-entity rotation="0 90 0" position="-8.08983 0 0.745">
-                    <a-entity geometry="primitive: circle" scale="0.1 0.1 0.1" class="trafficlight2" position="-3.66013 2.57078 4.58" material=" emissive: #80ff80;emissiveIntensity:0.75; side: double"></a-entity>
-                    <a-entity geometry="primitive: circle" scale="0.1 0.1 0.1" class="trafficlight2" position="-3.66013 2.571 4.268" material=" emissive: #80ff80;emissiveIntensity:0.75; side: double"></a-entity>
+                    <a-entity geometry="primitive: circle" scale="0.1 0.1 0.1" class="trafficlight2" position="-3.66013 2.57078 4.58" material=" color: #80ff80; side: double"></a-entity>
+                    <a-entity geometry="primitive: circle" scale="0.1 0.1 0.1" class="trafficlight2" position="-3.66013 2.571 4.268" material=" color: #80ff80; side: double"></a-entity>
                 </a-entity>
             </a-entity>
             <a-entity id="trafficlight12" position="24.689 0 -6.779">
                 <a-entity>
-                    <a-entity geometry="primitive: circle" scale="0.1 0.1 0.1" class="trafficlight1" position="-3.66013 2.57078 4.580" material=" emissive:  #ff8080;emissiveIntensity:0.75; side: double;"></a-entity>
-                    <a-entity geometry="primitive: circle" scale="0.1 0.1 0.1" class="trafficlight1" position="-3.66013 2.571 4.268" material=" emissive:  #ff8080;emissiveIntensity:0.75; side: double;"></a-entity>
+                    <a-entity geometry="primitive: circle" scale="0.1 0.1 0.1" class="trafficlight1" position="-3.66013 2.57078 4.580" material=" color: #ff8080; side: double;"></a-entity>
+                    <a-entity geometry="primitive: circle" scale="0.1 0.1 0.1" class="trafficlight1" position="-3.66013 2.571 4.268" material=" color: #ff8080; side: double;"></a-entity>
                 </a-entity>
                 <a-entity geometry="depth: 0.6; height: 0.02; width: 0.44" material="side: double; color: #292929" rotation="" id="lightcap" position="-3.656 2.86 4.40164"></a-entity>
                 <a-entity rotation="0 90 0" position="-8.08983 0 0.745">
-                    <a-entity geometry="primitive: circle" scale="0.1 0.1 0.1" class="trafficlight2" position="-3.66013 2.57078 4.58" material=" emissive: #80ff80;emissiveIntensity:0.75; side: double"></a-entity>
-                    <a-entity geometry="primitive: circle" scale="0.1 0.1 0.1" class="trafficlight2" position="-3.66013 2.571 4.268" material=" emissive: #80ff80;emissiveIntensity:0.75; side: double"></a-entity>
+                    <a-entity geometry="primitive: circle" scale="0.1 0.1 0.1" class="trafficlight2" position="-3.66013 2.57078 4.58" material=" color: #80ff80; side: double"></a-entity>
+                    <a-entity geometry="primitive: circle" scale="0.1 0.1 0.1" class="trafficlight2" position="-3.66013 2.571 4.268" material=" color: #80ff80; side: double"></a-entity>
                 </a-entity>
             </a-entity>
             <a-entity id="trafficlight13" position="43.604 0 -0.147">
                 <a-entity>
-                    <a-entity geometry="primitive: circle" scale="0.1 0.1 0.1" class="trafficlight1" position="-3.66013 2.57078 4.580" material=" emissive:  #ff8080;emissiveIntensity:0.75; side: double;"></a-entity>
-                    <a-entity geometry="primitive: circle" scale="0.1 0.1 0.1" class="trafficlight1" position="-3.66013 2.571 4.268" material=" emissive:  #ff8080;emissiveIntensity:0.75; side: double;"></a-entity>
+                    <a-entity geometry="primitive: circle" scale="0.1 0.1 0.1" class="trafficlight1" position="-3.66013 2.57078 4.580" material=" color: #ff8080; side: double;"></a-entity>
+                    <a-entity geometry="primitive: circle" scale="0.1 0.1 0.1" class="trafficlight1" position="-3.66013 2.571 4.268" material=" color: #ff8080; side: double;"></a-entity>
                 </a-entity>
                 <a-entity geometry="depth: 0.6; height: 0.02; width: 0.44" material="side: double; color: #292929" rotation="" id="lightcap" position="-3.656 2.86 4.40164"></a-entity>
                 <a-entity rotation="0 90 0" position="-8.08983 0 0.745">
-                    <a-entity geometry="primitive: circle" scale="0.1 0.1 0.1" class="trafficlight2" position="-3.66013 2.57078 4.58" material=" emissive: #80ff80;emissiveIntensity:0.75; side: double"></a-entity>
-                    <a-entity geometry="primitive: circle" scale="0.1 0.1 0.1" class="trafficlight2" position="-3.66013 2.571 4.268" material=" emissive: #80ff80;emissiveIntensity:0.75; side: double"></a-entity>
+                    <a-entity geometry="primitive: circle" scale="0.1 0.1 0.1" class="trafficlight2" position="-3.66013 2.57078 4.58" material=" color: #80ff80; side: double"></a-entity>
+                    <a-entity geometry="primitive: circle" scale="0.1 0.1 0.1" class="trafficlight2" position="-3.66013 2.571 4.268" material=" color: #80ff80; side: double"></a-entity>
                 </a-entity>
             </a-entity>
             <a-entity id="trafficlight14" position="43.607 0 -6.549">
                 <a-entity>
-                    <a-entity geometry="primitive: circle" scale="0.1 0.1 0.1" class="trafficlight1" position="-3.66013 2.57078 4.580" material=" emissive:  #ff8080;emissiveIntensity:0.75; side: double;"></a-entity>
-                    <a-entity geometry="primitive: circle" scale="0.1 0.1 0.1" class="trafficlight1" position="-3.66013 2.571 4.268" material=" emissive:  #ff8080;emissiveIntensity:0.75; side: double;"></a-entity>
+                    <a-entity geometry="primitive: circle" scale="0.1 0.1 0.1" class="trafficlight1" position="-3.66013 2.57078 4.580" material=" color: #ff8080; side: double;"></a-entity>
+                    <a-entity geometry="primitive: circle" scale="0.1 0.1 0.1" class="trafficlight1" position="-3.66013 2.571 4.268" material=" color: #ff8080; side: double;"></a-entity>
                 </a-entity>
                 <a-entity geometry="depth: 0.6; height: 0.02; width: 0.44" material="side: double; color: #292929" rotation="" id="lightcap" position="-3.656 2.86 4.40164"></a-entity>
                 <a-entity rotation="0 90 0" position="-8.08983 0 0.745">
-                    <a-entity geometry="primitive: circle" scale="0.1 0.1 0.1" class="trafficlight2" position="-3.66013 2.57078 4.58" material=" emissive: #80ff80;emissiveIntensity:0.75; side: double"></a-entity>
-                    <a-entity geometry="primitive: circle" scale="0.1 0.1 0.1" class="trafficlight2" position="-3.66013 2.571 4.268" material=" emissive: #80ff80;emissiveIntensity:0.75; side: double"></a-entity>
+                    <a-entity geometry="primitive: circle" scale="0.1 0.1 0.1" class="trafficlight2" position="-3.66013 2.57078 4.58" material=" color: #80ff80; side: double"></a-entity>
+                    <a-entity geometry="primitive: circle" scale="0.1 0.1 0.1" class="trafficlight2" position="-3.66013 2.571 4.268" material=" color: #80ff80; side: double"></a-entity>
                 </a-entity>
             </a-entity>
             <a-entity id="trafficlight15" position="30.864 0 -6.535">
                 <a-entity>
-                    <a-entity geometry="primitive: circle" scale="0.1 0.1 0.1" class="trafficlight1" position="-3.66013 2.57078 4.580" material=" emissive:  #ff8080;emissiveIntensity:0.75; side: double;"></a-entity>
-                    <a-entity geometry="primitive: circle" scale="0.1 0.1 0.1" class="trafficlight1" position="-3.66013 2.571 4.268" material=" emissive:  #ff8080;emissiveIntensity:0.75; side: double;"></a-entity>
+                    <a-entity geometry="primitive: circle" scale="0.1 0.1 0.1" class="trafficlight1" position="-3.66013 2.57078 4.580" material=" color: #ff8080; side: double;"></a-entity>
+                    <a-entity geometry="primitive: circle" scale="0.1 0.1 0.1" class="trafficlight1" position="-3.66013 2.571 4.268" material=" color: #ff8080; side: double;"></a-entity>
                 </a-entity>
                 <a-entity geometry="depth: 0.6; height: 0.02; width: 0.44" material="side: double; color: #292929" rotation="" id="lightcap" position="-3.656 2.86 4.40164"></a-entity>
                 <a-entity rotation="0 90 0" position="-8.08983 0 0.745">
-                    <a-entity geometry="primitive: circle" scale="0.1 0.1 0.1" class="trafficlight2" position="-3.66013 2.57078 4.58" material=" emissive: #80ff80;emissiveIntensity:0.75; side: double"></a-entity>
-                    <a-entity geometry="primitive: circle" scale="0.1 0.1 0.1" class="trafficlight2" position="-3.66013 2.571 4.268" material=" emissive: #80ff80;emissiveIntensity:0.75; side: double"></a-entity>
+                    <a-entity geometry="primitive: circle" scale="0.1 0.1 0.1" class="trafficlight2" position="-3.66013 2.57078 4.58" material=" color: #80ff80; side: double"></a-entity>
+                    <a-entity geometry="primitive: circle" scale="0.1 0.1 0.1" class="trafficlight2" position="-3.66013 2.571 4.268" material=" color: #80ff80; side: double"></a-entity>
                 </a-entity>
             </a-entity>
             <a-entity id="trafficlight16" position="24.689 0 -6.779">
                 <a-entity>
-                    <a-entity geometry="primitive: circle" scale="0.1 0.1 0.1" class="trafficlight1" position="-3.66013 2.57078 4.580" material=" emissive:  #ff8080;emissiveIntensity:0.75; side: double;"></a-entity>
-                    <a-entity geometry="primitive: circle" scale="0.1 0.1 0.1" class="trafficlight1" position="-3.66013 2.571 4.268" material=" emissive:  #ff8080;emissiveIntensity:0.75; side: double;"></a-entity>
+                    <a-entity geometry="primitive: circle" scale="0.1 0.1 0.1" class="trafficlight1" position="-3.66013 2.57078 4.580" material=" color: #ff8080; side: double;"></a-entity>
+                    <a-entity geometry="primitive: circle" scale="0.1 0.1 0.1" class="trafficlight1" position="-3.66013 2.571 4.268" material=" color: #ff8080; side: double;"></a-entity>
                 </a-entity>
                 <a-entity geometry="depth: 0.6; height: 0.02; width: 0.44" material="side: double; color: #292929" rotation="" id="lightcap" position="-3.656 2.86 4.40164"></a-entity>
                 <a-entity rotation="0 90 0" position="-8.08983 0 0.745">
-                    <a-entity geometry="primitive: circle" scale="0.1 0.1 0.1" class="trafficlight2" position="-3.66013 2.57078 4.58" material=" emissive: #80ff80;emissiveIntensity:0.75; side: double"></a-entity>
-                    <a-entity geometry="primitive: circle" scale="0.1 0.1 0.1" class="trafficlight2" position="-3.66013 2.571 4.268" material=" emissive: #80ff80;emissiveIntensity:0.75; side: double"></a-entity>
+                    <a-entity geometry="primitive: circle" scale="0.1 0.1 0.1" class="trafficlight2" position="-3.66013 2.57078 4.58" material=" color: #80ff80; side: double"></a-entity>
+                    <a-entity geometry="primitive: circle" scale="0.1 0.1 0.1" class="trafficlight2" position="-3.66013 2.571 4.268" material=" color: #80ff80; side: double"></a-entity>
                 </a-entity>
             </a-entity>
             <a-entity id="trafficlight17" position="11.977 0 -19.489">
                 <a-entity>
-                    <a-entity geometry="primitive: circle" scale="0.1 0.1 0.1" class="trafficlight1" position="-3.66013 2.57078 4.580" material=" emissive:  #ff8080;emissiveIntensity:0.75; side: double;"></a-entity>
-                    <a-entity geometry="primitive: circle" scale="0.1 0.1 0.1" class="trafficlight1" position="-3.66013 2.571 4.268" material=" emissive:  #ff8080;emissiveIntensity:0.75; side: double;"></a-entity>
+                    <a-entity geometry="primitive: circle" scale="0.1 0.1 0.1" class="trafficlight1" position="-3.66013 2.57078 4.580" material=" color: #ff8080; side: double;"></a-entity>
+                    <a-entity geometry="primitive: circle" scale="0.1 0.1 0.1" class="trafficlight1" position="-3.66013 2.571 4.268" material=" color: #ff8080; side: double;"></a-entity>
                 </a-entity>
                 <a-entity geometry="depth: 0.6; height: 0.02; width: 0.44" material="side: double; color: #292929" rotation="" id="lightcap" position="-3.656 2.86 4.40164"></a-entity>
                 <a-entity rotation="0 90 0" position="-8.08983 0 0.745">
-                    <a-entity geometry="primitive: circle" scale="0.1 0.1 0.1" class="trafficlight2" position="-3.66013 2.57078 4.58" material=" emissive: #80ff80;emissiveIntensity:0.75; side: double"></a-entity>
-                    <a-entity geometry="primitive: circle" scale="0.1 0.1 0.1" class="trafficlight2" position="-3.66013 2.571 4.268" material=" emissive: #80ff80;emissiveIntensity:0.75; side: double"></a-entity>
+                    <a-entity geometry="primitive: circle" scale="0.1 0.1 0.1" class="trafficlight2" position="-3.66013 2.57078 4.58" material=" color: #80ff80; side: double"></a-entity>
+                    <a-entity geometry="primitive: circle" scale="0.1 0.1 0.1" class="trafficlight2" position="-3.66013 2.571 4.268" material=" color: #80ff80; side: double"></a-entity>
                 </a-entity>
             </a-entity>
             <a-entity id="trafficlight18" position="-31.631 0 -19.343">
                 <a-entity>
-                    <a-entity geometry="primitive: circle" scale="0.1 0.1 0.1" class="trafficlight1" position="-3.66013 2.57078 4.58" material=" emissive: #80ff80;emissiveIntensity:0.75; side: double"></a-entity>
-                    <a-entity geometry="primitive: circle" scale="0.1 0.1 0.1" class="trafficlight1" position="-3.66013 2.571 4.268" material=" emissive: #80ff80;emissiveIntensity:0.75; side: double"></a-entity>
+                    <a-entity geometry="primitive: circle" scale="0.1 0.1 0.1" class="trafficlight1" position="-3.66013 2.57078 4.58" material=" color: #80ff80; side: double"></a-entity>
+                    <a-entity geometry="primitive: circle" scale="0.1 0.1 0.1" class="trafficlight1" position="-3.66013 2.571 4.268" material=" color: #80ff80; side: double"></a-entity>
                 </a-entity>
                 <a-entity geometry="depth: 0.6; height: 0.02; width: 0.44" material="side: double; color: #292929" rotation="" id="lightcap" position="-3.656 2.86 4.40164"></a-entity>
                 <a-entity rotation="0 90 0" position="-8.08983 0 0.745">
-                    <a-entity geometry="primitive: circle" scale="0.1 0.1 0.1" class="trafficlight2" position="-3.66013 2.57078 4.58" material=" emissive:  #ff8080;emissiveIntensity:0.75; side: double"></a-entity>
-                    <a-entity geometry="primitive: circle" scale="0.1 0.1 0.1" class="trafficlight2" position="-3.66013 2.571 4.268" material=" emissive:  #ff8080;emissiveIntensity:0.75; side: double"></a-entity>
+                    <a-entity geometry="primitive: circle" scale="0.1 0.1 0.1" class="trafficlight2" position="-3.66013 2.57078 4.58" material=" color: #ff8080; side: double"></a-entity>
+                    <a-entity geometry="primitive: circle" scale="0.1 0.1 0.1" class="trafficlight2" position="-3.66013 2.571 4.268" material=" color: #ff8080; side: double"></a-entity>
                 </a-entity>
             </a-entity>
             <a-entity id="trafficlight19" position="0.115 0 43.53124">
                 <a-entity>
-                    <a-entity geometry="primitive: circle" scale="0.1 0.1 0.1" class="trafficlight1" position="-3.66013 2.57078 4.58" material=" emissive: #80ff80;emissiveIntensity:0.75; side: double"></a-entity>
-                    <a-entity geometry="primitive: circle" scale="0.1 0.1 0.1" class="trafficlight1" position="-3.66013 2.571 4.268" material=" emissive: #80ff80;emissiveIntensity:0.75; side: double"></a-entity>
+                    <a-entity geometry="primitive: circle" scale="0.1 0.1 0.1" class="trafficlight1" position="-3.66013 2.57078 4.58" material=" color: #80ff80; side: double"></a-entity>
+                    <a-entity geometry="primitive: circle" scale="0.1 0.1 0.1" class="trafficlight1" position="-3.66013 2.571 4.268" material=" color: #80ff80; side: double"></a-entity>
                 </a-entity>
                 <a-entity geometry="depth: 0.6; height: 0.02; width: 0.44" material="side: double; color: #292929" rotation="" id="lightcap" position="-3.656 2.86 4.40164"></a-entity>
                 <a-entity rotation="0 90 0" position="-8.08983 0 0.745">
-                    <a-entity geometry="primitive: circle" scale="0.1 0.1 0.1" class="trafficlight2" position="-3.66013 2.57078 4.58" material=" emissive:  #ff8080;emissiveIntensity:0.75; side: double"></a-entity>
-                    <a-entity geometry="primitive: circle" scale="0.1 0.1 0.1" class="trafficlight2" position="-3.66013 2.571 4.268" material=" emissive:  #ff8080;emissiveIntensity:0.75; side: double"></a-entity>
+                    <a-entity geometry="primitive: circle" scale="0.1 0.1 0.1" class="trafficlight2" position="-3.66013 2.57078 4.58" material=" color: #ff8080; side: double"></a-entity>
+                    <a-entity geometry="primitive: circle" scale="0.1 0.1 0.1" class="trafficlight2" position="-3.66013 2.571 4.268" material=" color: #ff8080; side: double"></a-entity>
                 </a-entity>
             </a-entity>
             <a-entity id="trafficlight20" position="12.06 0 36.797">
                 <a-entity>
-                    <a-entity geometry="primitive: circle" scale="0.1 0.1 0.1" class="trafficlight1" position="-3.66013 2.57078 4.58" material=" emissive:  #ff8080;emissiveIntensity:0.75; side: double"></a-entity>
-                    <a-entity geometry="primitive: circle" scale="0.1 0.1 0.1" class="trafficlight1" position="-3.66013 2.571 4.268" material=" emissive:  #ff8080;emissiveIntensity:0.75; side: double"></a-entity>
+                    <a-entity geometry="primitive: circle" scale="0.1 0.1 0.1" class="trafficlight1" position="-3.66013 2.57078 4.58" material=" color: #ff8080; side: double"></a-entity>
+                    <a-entity geometry="primitive: circle" scale="0.1 0.1 0.1" class="trafficlight1" position="-3.66013 2.571 4.268" material=" color: #ff8080; side: double"></a-entity>
                 </a-entity>
                 <a-entity geometry="depth: 0.6; height: 0.02; width: 0.44" material="side: double; color: #292929" rotation="" id="lightcap" position="-3.656 2.86 4.40164"></a-entity>
                 <a-entity rotation="0 90 0" position="-8.08983 0 0.745">
-                    <a-entity geometry="primitive: circle" scale="0.1 0.1 0.1" class="trafficlight2" position="-3.66013 2.57078 4.58" material=" emissive: #80ff80;emissiveIntensity:0.75; side: double"></a-entity>
-                    <a-entity geometry="primitive: circle" scale="0.1 0.1 0.1" class="trafficlight2" position="-3.66013 2.571 4.268" material=" emissive: #80ff80;emissiveIntensity:0.75; side: double"></a-entity>
+                    <a-entity geometry="primitive: circle" scale="0.1 0.1 0.1" class="trafficlight2" position="-3.66013 2.57078 4.58" material=" color: #80ff80; side: double"></a-entity>
+                    <a-entity geometry="primitive: circle" scale="0.1 0.1 0.1" class="trafficlight2" position="-3.66013 2.571 4.268" material=" color: #80ff80; side: double"></a-entity>
                 </a-entity>
             </a-entity>
             <a-entity id="trafficlight21" position="30.966 0 37.025">
                 <a-entity>
-                    <a-entity geometry="primitive: circle" scale="0.1 0.1 0.1" class="trafficlight1" position="-3.66013 2.57078 4.58" material=" emissive:  #ff8080;emissiveIntensity:0.75; side: double"></a-entity>
-                    <a-entity geometry="primitive: circle" scale="0.1 0.1 0.1" class="trafficlight1" position="-3.66013 2.571 4.268" material=" emissive:  #ff8080;emissiveIntensity:0.75; side: double"></a-entity>
+                    <a-entity geometry="primitive: circle" scale="0.1 0.1 0.1" class="trafficlight1" position="-3.66013 2.57078 4.58" material=" color: #ff8080; side: double"></a-entity>
+                    <a-entity geometry="primitive: circle" scale="0.1 0.1 0.1" class="trafficlight1" position="-3.66013 2.571 4.268" material=" color: #ff8080; side: double"></a-entity>
                 </a-entity>
                 <a-entity geometry="depth: 0.6; height: 0.02; width: 0.44" material="side: double; color: #292929" rotation="" id="lightcap" position="-3.656 2.86 4.40164"></a-entity>
                 <a-entity rotation="0 90 0" position="-8.08983 0 0.745">
-                    <a-entity geometry="primitive: circle" scale="0.1 0.1 0.1" class="trafficlight2" position="-3.66013 2.57078 4.58" material=" emissive: #80ff80;emissiveIntensity:0.75; side: double"></a-entity>
-                    <a-entity geometry="primitive: circle" scale="0.1 0.1 0.1" class="trafficlight2" position="-3.66013 2.571 4.268" material=" emissive: #80ff80;emissiveIntensity:0.75; side: double"></a-entity>
+                    <a-entity geometry="primitive: circle" scale="0.1 0.1 0.1" class="trafficlight2" position="-3.66013 2.57078 4.58" material=" color: #80ff80; side: double"></a-entity>
+                    <a-entity geometry="primitive: circle" scale="0.1 0.1 0.1" class="trafficlight2" position="-3.66013 2.571 4.268" material=" color: #80ff80; side: double"></a-entity>
                 </a-entity>
             </a-entity>
             <a-entity id="trafficlight22" position="12.058 0 24.099" rotation="">
                 <a-entity>
-                    <a-entity geometry="primitive: circle" scale="0.1 0.1 0.1" class="trafficlight1" position="-3.66013 2.57078 4.58" material=" emissive:  #ffff80;emissiveIntensity:0.75; side: double"></a-entity>
-                    <a-entity geometry="primitive: circle" scale="0.1 0.1 0.1" class="trafficlight1" position="-3.66013 2.571 4.268" material=" emissive:  #ffff80;emissiveIntensity:0.75; side: double"></a-entity>
+                    <a-entity geometry="primitive: circle" scale="0.1 0.1 0.1" class="trafficlight1" position="-3.66013 2.57078 4.58" material=" color: #ffff80; side: double"></a-entity>
+                    <a-entity geometry="primitive: circle" scale="0.1 0.1 0.1" class="trafficlight1" position="-3.66013 2.571 4.268" material=" color: #ffff80; side: double"></a-entity>
                 </a-entity>
                 <a-entity geometry="depth: 0.6; height: 0.02; width: 0.44" material="side: double; color: #292929" rotation="" id="lightcap" position="-3.656 2.86 4.40164"></a-entity>
                 <a-entity rotation="0 90 0" position="-8.08983 0 0.745">
-                    <a-entity geometry="primitive: circle" scale="0.1 0.1 0.1" class="trafficlight2" position="-3.66013 2.57078 4.58" material=" emissive:  #ffff80;emissiveIntensity:0.75; side: double"></a-entity>
-                    <a-entity geometry="primitive: circle" scale="0.1 0.1 0.1" class="trafficlight2" position="-3.66013 2.571 4.268" material=" emissive:  #ffff80;emissiveIntensity:0.75; side: double"></a-entity>
+                    <a-entity geometry="primitive: circle" scale="0.1 0.1 0.1" class="trafficlight2" position="-3.66013 2.57078 4.58" material=" color: #ffff80; side: double"></a-entity>
+                    <a-entity geometry="primitive: circle" scale="0.1 0.1 0.1" class="trafficlight2" position="-3.66013 2.571 4.268" material=" color: #ffff80; side: double"></a-entity>
                 </a-entity>
             </a-entity>
             <a-entity id="trafficlight23" position="24.76722 0 36.795">
                 <a-entity>
-                    <a-entity geometry="primitive: circle" scale="0.1 0.1 0.1" class="trafficlight1" position="-3.66013 2.57078 4.58" material=" emissive:  #ff8080;emissiveIntensity:0.75; side: double"></a-entity>
-                    <a-entity geometry="primitive: circle" scale="0.1 0.1 0.1" class="trafficlight1" position="-3.66013 2.571 4.268" material=" emissive:  #ff8080;emissiveIntensity:0.75; side: double"></a-entity>
+                    <a-entity geometry="primitive: circle" scale="0.1 0.1 0.1" class="trafficlight1" position="-3.66013 2.57078 4.58" material=" color: #ff8080; side: double"></a-entity>
+                    <a-entity geometry="primitive: circle" scale="0.1 0.1 0.1" class="trafficlight1" position="-3.66013 2.571 4.268" material=" color: #ff8080; side: double"></a-entity>
                 </a-entity>
                 <a-entity geometry="depth: 0.6; height: 0.02; width: 0.44" material="side: double; color: #292929" rotation="" id="lightcap" position="-3.656 2.86 4.40164"></a-entity>
                 <a-entity rotation="0 90 0" position="-8.08983 0 0.745">
-                    <a-entity geometry="primitive: circle" scale="0.1 0.1 0.1" class="trafficlight2" position="-3.66013 2.57078 4.58" material=" emissive: #80ff80;emissiveIntensity:0.75; side: double"></a-entity>
-                    <a-entity geometry="primitive: circle" scale="0.1 0.1 0.1" class="trafficlight2" position="-3.66013 2.571 4.268" material=" emissive: #80ff80;emissiveIntensity:0.75; side: double"></a-entity>
+                    <a-entity geometry="primitive: circle" scale="0.1 0.1 0.1" class="trafficlight2" position="-3.66013 2.57078 4.58" material=" color: #80ff80; side: double"></a-entity>
+                    <a-entity geometry="primitive: circle" scale="0.1 0.1 0.1" class="trafficlight2" position="-3.66013 2.571 4.268" material=" color: #80ff80; side: double"></a-entity>
                 </a-entity>
             </a-entity>
             <a-entity id="trafficlight24" position="30.963 0 37.035">
                 <a-entity>
-                    <a-entity geometry="primitive: circle" scale="0.1 0.1 0.1" class="trafficlight1" position="-3.66013 2.57078 4.58" material=" emissive:  #ffff80;emissiveIntensity:0.75; side: double"></a-entity>
-                    <a-entity geometry="primitive: circle" scale="0.1 0.1 0.1" class="trafficlight1" position="-3.66013 2.571 4.268" material=" emissive:  #ffff80;emissiveIntensity:0.75; side: double"></a-entity>
+                    <a-entity geometry="primitive: circle" scale="0.1 0.1 0.1" class="trafficlight1" position="-3.66013 2.57078 4.58" material=" color: #ffff80; side: double"></a-entity>
+                    <a-entity geometry="primitive: circle" scale="0.1 0.1 0.1" class="trafficlight1" position="-3.66013 2.571 4.268" material=" color: #ffff80; side: double"></a-entity>
                 </a-entity>
                 <a-entity geometry="depth: 0.6; height: 0.02; width: 0.44" material="side: double; color: #292929" rotation="" id="lightcap" position="-3.656 2.86 4.40164"></a-entity>
                 <a-entity rotation="0 90 0" position="-8.08983 0 0.745">
-                    <a-entity geometry="primitive: circle" scale="0.1 0.1 0.1" class="trafficlight2" position="-3.66013 2.57078 4.58" material=" emissive:  #ffff80;emissiveIntensity:0.75; side: double"></a-entity>
-                    <a-entity geometry="primitive: circle" scale="0.1 0.1 0.1" class="trafficlight2" position="-3.66013 2.571 4.268" material=" emissive:  #ffff80;emissiveIntensity:0.75; side: double"></a-entity>
+                    <a-entity geometry="primitive: circle" scale="0.1 0.1 0.1" class="trafficlight2" position="-3.66013 2.57078 4.58" material=" color: #ffff80; side: double"></a-entity>
+                    <a-entity geometry="primitive: circle" scale="0.1 0.1 0.1" class="trafficlight2" position="-3.66013 2.571 4.268" material=" color: #ffff80; side: double"></a-entity>
                 </a-entity>
             </a-entity>
             <a-entity id="trafficlight25" position="43.704 0 43.428" rotation="">
                 <a-entity>
-                    <a-entity geometry="primitive: circle" scale="0.1 0.1 0.1" class="trafficlight1" position="-3.66013 2.57078 4.58" material=" emissive:  #ffff80;emissiveIntensity:0.75; side: double"></a-entity>
-                    <a-entity geometry="primitive: circle" scale="0.1 0.1 0.1" class="trafficlight1" position="-3.66013 2.571 4.268" material=" emissive:  #ffff80;emissiveIntensity:0.75; side: double"></a-entity>
+                    <a-entity geometry="primitive: circle" scale="0.1 0.1 0.1" class="trafficlight1" position="-3.66013 2.57078 4.58" material=" color: #ffff80; side: double"></a-entity>
+                    <a-entity geometry="primitive: circle" scale="0.1 0.1 0.1" class="trafficlight1" position="-3.66013 2.571 4.268" material=" color: #ffff80; side: double"></a-entity>
                 </a-entity>
                 <a-entity geometry="depth: 0.6; height: 0.02; width: 0.44" material="side: double; color: #292929" rotation="" id="lightcap" position="-3.656 2.86 4.40164"></a-entity>
                 <a-entity rotation="0 90 0" position="-8.08983 0 0.745">
-                    <a-entity geometry="primitive: circle" scale="0.1 0.1 0.1" class="trafficlight2" position="-3.66013 2.57078 4.58" material=" emissive:  #ffff80;emissiveIntensity:0.75; side: double"></a-entity>
-                    <a-entity geometry="primitive: circle" scale="0.1 0.1 0.1" class="trafficlight2" position="-3.66013 2.571 4.268" material=" emissive:  #ffff80;emissiveIntensity:0.75; side: double"></a-entity>
+                    <a-entity geometry="primitive: circle" scale="0.1 0.1 0.1" class="trafficlight2" position="-3.66013 2.57078 4.58" material=" color: #ffff80; side: double"></a-entity>
+                    <a-entity geometry="primitive: circle" scale="0.1 0.1 0.1" class="trafficlight2" position="-3.66013 2.571 4.268" material=" color: #ffff80; side: double"></a-entity>
                 </a-entity>
             </a-entity>
             <a-entity id="trafficlight26" position="43.702 0 37.035">
                 <a-entity>
-                    <a-entity geometry="primitive: circle" scale="0.1 0.1 0.1" class="trafficlight1" position="-3.66013 2.57078 4.58" material=" emissive: #80ff80;emissiveIntensity:0.75; side: double"></a-entity>
-                    <a-entity geometry="primitive: circle" scale="0.1 0.1 0.1" class="trafficlight1" position="-3.66013 2.571 4.268" material=" emissive: #80ff80;emissiveIntensity:0.75; side: double"></a-entity>
+                    <a-entity geometry="primitive: circle" scale="0.1 0.1 0.1" class="trafficlight1" position="-3.66013 2.57078 4.58" material=" color: #80ff80; side: double"></a-entity>
+                    <a-entity geometry="primitive: circle" scale="0.1 0.1 0.1" class="trafficlight1" position="-3.66013 2.571 4.268" material=" color: #80ff80; side: double"></a-entity>
                 </a-entity>
                 <a-entity geometry="depth: 0.6; height: 0.02; width: 0.44" material="side: double; color: #292929" rotation="" id="lightcap" position="-3.656 2.86 4.40164"></a-entity>
                 <a-entity rotation="0 90 0" position="-8.08983 0 0.745">
-                    <a-entity geometry="primitive: circle" scale="0.1 0.1 0.1" class="trafficlight2" position="-3.66013 2.57078 4.58" material=" emissive:  #ff8080;emissiveIntensity:0.75; side: double"></a-entity>
-                    <a-entity geometry="primitive: circle" scale="0.1 0.1 0.1" class="trafficlight2" position="-3.66013 2.571 4.268" material=" emissive:  #ff8080;emissiveIntensity:0.75; side: double"></a-entity>
+                    <a-entity geometry="primitive: circle" scale="0.1 0.1 0.1" class="trafficlight2" position="-3.66013 2.57078 4.58" material=" color: #ff8080; side: double"></a-entity>
+                    <a-entity geometry="primitive: circle" scale="0.1 0.1 0.1" class="trafficlight2" position="-3.66013 2.571 4.268" material=" color: #ff8080; side: double"></a-entity>
                 </a-entity>
             </a-entity>
             <a-entity id="car1" scale="0.1 0.1 0.1" obj-model="mtl: street/Lowpoly_City_Free_Pack.mtl; obj: street/car1.obj" position="21.645 2.469 19" rotation="0 45 0"></a-entity>
@@ -692,11 +521,16 @@
             <a-entity geometry="" material="side: double; emissive: #ffffff" rotation="90 0 0" scale="0.59 0.2 0.1" id="streetlight-21" position="14.755 6.04766 25.997"></a-entity>
             <a-entity geometry="" material="side: double; emissive: #ffffff" rotation="90 0 0" scale="0.59 0.2 0.1" id="streetlight-22" position="14.755 6.04766 36.99588"></a-entity>
         </a-entity>
-        <a-entity light="intensity: 0.15; color: #BBB; type: ambient"></a-entity>
-        <a-entity light="intensity: 0.15; castShadow: true" position="-0.5 1 1"></a-entity>
-        <!-- <a-entity light="intensity: 0.4; castShadow: true; type: ambient; shadowCameraLeft: -5.01" position="-0.5 1 1"></a-entity> -->
-    </a-scene>
+        <a-entity light="intensity: 0.5; color: #BBB; type: ambient"></a-entity>
+        <a-entity light="intensity: 0.5; castShadow: true" position="-0.5 1 1"></a-entity>
 
+        <a-entity id="cloud" geometry="primitive: sphere; segmentsHeight: 6; segmentsWidth: 5" material="emissive: #fff; emissiveIntensity: 0.5" position="0 41.31607 -108.071" scale="4.357 3.176 16.077"></a-entity>
+        <a-entity id="cloud-2" geometry="primitive: sphere; segmentsHeight: 6; segmentsWidth: 5" material="emissive: #fff; emissiveIntensity: 0.5" position="-37.86576 41.31607 -108.071" scale="5.357 3.176 7.077"></a-entity>
+        <a-entity id="cloud-3" geometry="primitive: sphere; segmentsHeight: 6; segmentsWidth: 5" material="emissive: #fff; emissiveIntensity: 0.5" position="-100.13505 41.31607 -78.73494" scale="4.357 3.176 6.077"></a-entity>
+        <a-entity id="cloud-4" geometry="primitive: sphere; segmentsHeight: 6; segmentsWidth: 5" material="emissive: #fff; emissiveIntensity: 0.5" position="151.81816 85.53831 36.11745" scale="4.27123 8.64857 23.45211"></a-entity>
+        <a-entity id="cloud-5" geometry="primitive: sphere; segmentsHeight: 6; segmentsWidth: 5" material="emissive: #fff; emissiveIntensity: 0.5" position="0 41.31607 92.37378" scale="5.357 3.176 7.077"></a-entity>
+        <a-entity id="cloud-6" geometry="primitive: sphere; segmentsHeight: 6; segmentsWidth: 5" material="emissive: #fff; emissiveIntensity: 0.5" position="-100.13505 41.31607 48.80351" scale="4.357 3.176 6.077" rotation="0 -45.753 0"></a-entity>
+    </a-scene>
     <script>
         // red : #ff8080;
         // green : #80ff80;
@@ -726,11 +560,10 @@
             }
             if (i % 3 == 1) {
                 for (x = 0; x < light1.length; x++) {
-                    light1[x].setAttribute("material", 'emissive', '#ff8080');
-                    light2[x].setAttribute("material", 'emissive', '#80ff80');
+                    light1[x].setAttribute("material", 'color', '#ff8080');
+                    light2[x].setAttribute("material", 'color', '#80ff80');
                 }
                 if (i % 2 == 0) {
-                    //-47.589 2.469 19.000
                     anim1 = 'animation__a4' + i;
                     anim2 = 'animation__a1' + i;
                     anim3 = 'animation__a9' + i;
@@ -900,15 +733,15 @@
             }
             if (i % 3 == 0) {
                 for (x = 0; x < light1.length; x++) {
-                    light1[x].setAttribute("material", 'emissive', '#ffff80');
-                    light2[x].setAttribute("material", 'emissive', '#ffff80');
+                    light1[x].setAttribute("material", 'color', '#ffff80');
+                    light2[x].setAttribute("material", 'color', '#ffff80');
                 }
             }
 
             if (i % 3 == 2) {
                 for (x = 0; x < light1.length; x++) {
-                    light1[x].setAttribute("material", 'emissive', '#80ff80');
-                    light2[x].setAttribute("material", 'emissive', '#ff8080');
+                    light1[x].setAttribute("material", 'color', '#80ff80');
+                    light2[x].setAttribute("material", 'color', '#ff8080');
                 }
 
                 if (i % 2 == 0) {
@@ -971,9 +804,6 @@
                 }
 
                 if (i % 2 == 1) {
-                    //rot :0 -45 0
-                    //pos1 :-12.301 2.469 27.425
-                    //pos2 :-12.301 2.469 -27.778
                     anim1 = 'animation__a2' + i;
                     anim2 = 'animation__a3' + i;
                     car1.setAttribute(anim1, {
